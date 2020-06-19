@@ -1,0 +1,218 @@
+@mixin button {
+    outline: none;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px 35px;
+}
+
+@mixin yellowUnderline {
+    background: linear-gradient(0deg, rgba(255, 0, 255, 0) 0%, rgba(255, 0, 255, 0) 16%, #F1D22A 16%, #F1D22A 32%, rgba(255, 0, 255, 0) 10%);
+    padding: 0 0.1em 0 0.1em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.top-container {
+    background: linear-gradient(120.14deg, #775ba7, #4F3180 122.55%);
+    color: #ffffff;
+
+    .header {
+        display: flex;
+        padding: 30px 5%;
+        justify-content: space-between;
+        align-items: center;
+        background: #7559A5;
+
+        .logo {
+            font-family: 'Century', serif;
+            font-size: 28px;
+        }
+
+        .nav-items {
+            display: flex;
+            font-weight: 500;
+
+            .nav-item {
+                margin-right: 35px;
+                cursor: pointer;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .btn-sign-up {
+            @include button;
+            background: #F1D22A;
+        }
+    }
+
+    hr {
+        margin: 0;
+        background-color: #ffffff;
+        border: none;
+        height: .4px;
+    }
+
+    .hero {
+        display: flex;
+        padding: 70px 7%;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            text-align: center;
+
+            .title {
+                font-weight: 600;
+                font-size: 43px;
+                margin-bottom: 20px;
+
+                // span {
+                //     position: relative;
+                //     z-index: 2;
+
+                //     &::after {
+                //         position: absolute;
+                //         content: "";
+                //         bottom: 8px;
+                //         left: 2px;
+                //         text-align: left;
+                //         width: 50px;
+                //         height: 7px;
+                //         background: #F1D22A;
+                //         z-index: 0;
+                //     }
+                // }
+
+                span {
+                    @include yellowUnderline;
+                }
+            }
+
+            .sub {
+                font-weight: 500;
+                padding: 0 50px;
+                margin-bottom: 60px;
+            }
+
+            .start {
+                @include button;
+                background: #F1D22A;
+                text-transform: capitalize;
+                padding: 10px 30px;
+            }
+        }
+
+        .right {
+            img {
+                width: 450px;
+                margin-left: 120px;
+            }
+
+
+            // background: url("../../assets/images/hero.png") 50% 50%;
+            // background-size: cover;
+            // width: 100%;
+        }
+    }
+}
+
+// 1050 950 820
+
+@media screen and (max-width: 1050px) {
+    .top-container {
+
+        .header {
+            .nav-items {
+                font-size: 14px;
+            }
+        }
+
+        .hero {
+            padding: 70px 3%;
+
+            .right {
+
+                img {
+                    margin-left: 30px;
+                    width: 90%;
+                }
+            }
+
+            .left {
+                .title {
+                    font-size: 40px;
+                }
+
+                .sub {
+                    padding: 0 22px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .top-container {
+        background: url('../../assets/images/hero.png') rgba(0, 0, 0, 0.4) 50% 50%;
+        background-blend-mode: multiply;
+        background-size: cover;
+
+        .header {
+            background: transparent;
+
+
+            .nav-items {
+                display: none;
+            }
+
+            .btn-sign-up {
+                display: none;
+            }
+        }
+
+        .hero {
+            justify-content: center;
+            padding: 150px 3%;
+
+            .right {
+                display: none;
+            }
+
+            .left {
+                .sub {
+                    padding: 0 20%;
+                }
+
+                .title {
+                    font-size: 43px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .top-container {
+        .hero {
+            // padding: 60px 3%;
+
+            .left {
+                .title {
+                    font-size: 30px;
+                }
+
+                .sub {
+                    padding: 0 22px;
+                }
+            }
+        }
+    }
+}
