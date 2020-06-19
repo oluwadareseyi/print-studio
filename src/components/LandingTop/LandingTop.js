@@ -12,7 +12,7 @@ const LandingTop = () => {
             <div className="nav-item">Home</div>
             <div className="nav-item">About us</div>
             <div className="nav-item">Services</div>
-            <div className="nav-item">Our works</div>
+            <div className="nav-item">Our work</div>
             <div className="nav-item">Contact us</div>
           </div>
 
@@ -33,12 +33,35 @@ const LandingTop = () => {
           </div>
 
           <div className="right">
-            <img src={require("../../assets/images/hero.png")} alt="" />
+            <img src={require("../../assets/images/hero.png")} alt="hero" />
           </div>
         </div>
       </div>
 
-      <div className="about-con"></div>
+      <div className="about-con">
+        <div className="about-con__left">
+          <div className="topic">About Us</div>
+          <div className="title">
+            A brief history about our <span>printing house</span>
+          </div>
+          <div className="sub">
+            <p>
+              PrintStudio is the preferred online printer of business cards,
+              postcards, brochures, and other printed materials launched by
+              Abiodun Okunade.
+            </p>
+            <p>
+              PrintStudio has risen from a ten-man operation set in an office to
+              one of the largest online printing companies in the world. The
+              secret to our success...
+            </p>
+          </div>
+          <button className="about">About Us</button>
+        </div>
+        <div className="about-con__right">
+          <img src={require("../../assets/images/about.jpg")} alt="about" />
+        </div>
+      </div>
     </>
   );
 };

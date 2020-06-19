@@ -4,7 +4,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #ffffff;
     padding: 10px 35px;
 }
@@ -49,6 +49,7 @@
         .btn-sign-up {
             @include button;
             background: #F1D22A;
+            text-transform: uppercase;
         }
     }
 
@@ -104,7 +105,6 @@
             .start {
                 @include button;
                 background: #F1D22A;
-                text-transform: capitalize;
                 padding: 10px 30px;
             }
         }
@@ -120,6 +120,54 @@
             // background-size: cover;
             // width: 100%;
         }
+    }
+}
+
+.about-con {
+    display: flex;
+    padding: 120px 10%;
+    align-items: center;
+
+    &__left {
+        padding-right: 170px;
+
+        .topic {
+            color: #650088;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 40px;
+            margin-bottom: 40px;
+            line-height: 1.2;
+
+            span {
+                @include yellowUnderline;
+            }
+        }
+
+        .sub {
+            font-size: 19px;
+            font-weight: 500;
+            margin-bottom: 40px;
+
+            p {
+                &:first-child {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        button {
+            @include button;
+            background: #650088;
+        }
+    }
+
+    img {
+        width: 450px;
     }
 }
 
@@ -155,6 +203,18 @@
                     font-size: 15px;
                 }
             }
+        }
+    }
+
+    .about-con {
+        padding: 120px 5%;
+
+        img {
+            width: 400px;
+        }
+
+        &__left {
+            padding-right: 8%;
         }
     }
 }
@@ -197,6 +257,47 @@
             }
         }
     }
+
+    .about-con {
+        padding: 100px 5%;
+
+        &__left {
+
+            .title {
+                font-size: 35px;
+            }
+        }
+
+        img {
+            width: 300px;
+        }
+
+        &__left {
+            padding-right: 10%;
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .about-con {
+        padding: 100px 10%;
+        flex-direction: column;
+
+        &__left {
+
+            button {
+                margin-bottom: 40px;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &__left {
+            padding-right: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -214,5 +315,9 @@
                 }
             }
         }
+    }
+
+    .about-con {
+        padding: 100px 7%;
     }
 }
