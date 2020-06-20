@@ -62,6 +62,122 @@ const LandingTop = () => {
           <img src={require("../../assets/images/about.jpg")} alt="about" />
         </div>
       </div>
+
+      <div className="services-con">
+        <div className="upper">
+          <div className="topic">Our Capabilities</div>
+          <div className="head">
+            <div className="title">
+              Having attractive <br /> <span>services</span> has never been{" "}
+              <span>easier.</span>
+            </div>
+            <div className="sub">
+              PrintStudio is the preferred online printer of business cards,
+              postcards, brochures, and other printed materials. We offer a
+              variety of printing formats, each with their own customization
+              options.
+            </div>
+          </div>
+
+          <div className="title-2">
+            Having attractive <span>services</span> has never been{" "}
+            <span>easier.</span>
+          </div>
+        </div>
+
+        <div className="services-con__box">
+          <div className="service-group">
+            <div className="service">
+              <img
+                src={require("../../assets/images/services-1.svg")}
+                alt="services"
+              />
+              <div className="item">
+                <div className="title">Projects</div>
+                <div className="sub">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit, sed.
+                </div>
+              </div>
+            </div>
+
+            <div className="service">
+              <img
+                src={require("../../assets/images/scanner.svg")}
+                alt="services"
+              />
+              <div className="item">
+                <div className="title">Scanning</div>
+                <div className="sub">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit, sed.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="service-group">
+            <div className="service">
+              <img
+                src={require("../../assets/images/Xerox.svg")}
+                alt="services"
+              />
+              <div className="item">
+                <div className="title">Xerographic</div>
+                <div className="sub">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit, sed.
+                </div>
+              </div>
+            </div>
+
+            <div className="service">
+              <img
+                src={require("../../assets/images/paper.svg")}
+                alt="services"
+              />
+              <div className="item">
+                <div className="title">Printing On Paper</div>
+                <div className="sub">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit, sed.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="service-group">
+            <div className="service">
+              <img
+                src={require("../../assets/images/3d-print.svg")}
+                alt="services"
+              />
+              <div className="item">
+                <div className="title">3D Printing</div>
+                <div className="sub">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit, sed.
+                </div>
+              </div>
+            </div>
+
+            <div className="service">
+              <img
+                src={require("../../assets/images/mug.svg")}
+                alt="services"
+              />
+              <div className="item">
+                <div className="title">Printing On Gadgets</div>
+                <div className="sub">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit, sed.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="more">
+            <div className="text">
+              And <span>14 more</span> services. Check them
+            </div>
+            <button className="button">All Services</button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
