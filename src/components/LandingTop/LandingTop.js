@@ -33,7 +33,7 @@ const LandingTop = () => {
           </div>
 
           <div className="right">
-            <img src={require("../../assets/images/hero.png")} alt="hero" />
+            <img src="/hero.png" alt="hero" />
           </div>
         </div>
       </div>
