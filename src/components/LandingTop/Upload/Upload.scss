@@ -1,0 +1,217 @@
+@import '../../../index.scss';
+
+.upload-con {
+    padding: 50px 0;
+
+    &__inner {
+        display: flex;
+        position: relative;
+
+        .left {
+            width: 500px;
+        }
+
+        .right {
+            background: url("../../../assets/images/printer.svg") #F1D22A no-repeat 100% 50%;
+            background-size: contain;
+            background-blend-mode: overlay;
+
+            position: relative;
+            color: #ffffff;
+
+            .content {
+                padding: 100px 18%;
+                padding-left: 32%;
+            }
+
+            .title {
+                line-height: 1.3;
+                font-size: 60px;
+                font-weight: 600;
+                margin-bottom: 30px;
+
+                span {
+                    @include yellowUnderline($purple);
+                }
+            }
+
+            .sub {
+                margin-bottom: 50px;
+            }
+
+            img {
+                position: absolute;
+                width: 100px;
+                top: 0;
+                // opacity: .5;
+            }
+
+            button {
+                @include button;
+                background: $purple;
+            }
+        }
+
+        .upload-box {
+            background: #ffffff;
+            box-shadow: 2px 8px 50px 0 rgba(0, 0, 0, 0.15);
+            position: absolute;
+            left: 12%;
+            top: 12.5%;
+
+            .content {
+                padding: 40px 40px;
+
+                .title {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #333238;
+                    margin-bottom: 5px;
+                }
+
+                .sub {
+                    color: #232327;
+                    font-weight: 500;
+                    margin-bottom: 25px;
+                    font-size: 14px;
+                }
+
+                .drop-zone {
+                    border: 1px dashed #838383;
+                    font-size: 12px;
+                    font-weight: 500;
+                    text-align: center;
+                    padding: 35px 100px;
+                    margin-bottom: 30px;
+
+                    img {
+                        width: 30px;
+                        margin-bottom: 10px;
+                    }
+
+                    .types {
+                        color: #232327;
+                        margin-bottom: 5px;
+                    }
+
+                    .alt {
+                        color: #696969;
+                        margin-bottom: 5px;
+                    }
+
+                    .click {
+                        color: $purple;
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+
+                .options {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    button {
+                        @include button;
+                        background: $purple;
+                        padding: 12px 12px;
+                        font-size: 12px;
+                        border-radius: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .upload-con__inner {
+
+        .upload-box {
+            left: 50px;
+        }
+
+        .right {
+            background-position: 120% 50%;
+
+            .content {
+                padding: 100px 5%;
+                padding-left: 40%;
+            }
+
+            .title {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .upload-con {
+        padding: 0 10%;
+        background: #F1D22A;
+
+        &__inner {
+            flex-direction: column;
+            padding: 100px 5%;
+
+            .right {
+                background: none;
+
+                button {
+                    display: none;
+                }
+
+                .content {
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+
+            .left {
+                display: none;
+            }
+
+            .upload-box {
+                position: static;
+
+                .content {
+                    .drop-zone {
+                        padding: 35px 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .upload-con {
+        padding: 0 5%;
+
+        &__inner {
+            padding: 100px 0;
+
+            .right {
+                .title {
+                    font-size: 40px;
+                }
+
+                .sub {
+                    font-size: 14px;
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .upload-con__inner .upload-box .content .title {
+        font-size: 18px;
+
+    }
+}

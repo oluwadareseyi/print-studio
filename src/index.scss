@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+
+$purple: #650088;
+
+@mixin button {
+  outline: none;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding: 10px 35px;
+}
+
+@mixin yellowUnderline($color) {
+  background: linear-gradient(0deg, rgba(255, 0, 255, 0) 0%, rgba(255, 0, 255, 0) 16%, $color 16%, $color 32%, rgba(255, 0, 255, 0) 10%);
+  padding: 0 0.1em 0 0;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 body {
   margin: 0;
   padding: 0;
