@@ -210,8 +210,13 @@
 }
 
 @media screen and (max-width: 500px) {
-    .upload-con__inner .upload-box .content .title {
-        font-size: 18px;
+    .upload-con__inner .upload-box .content {
+        .title {
+            font-size: 18px;
+        }
 
+        .drop-zone {
+            padding: 35px 40px;
+        }
     }
 }
