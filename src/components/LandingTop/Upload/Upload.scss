@@ -184,7 +184,7 @@
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 670px) {
     .upload-con {
         padding: 0 5%;
 
@@ -198,6 +198,7 @@
 
                 .sub {
                     font-size: 14px;
+                    padding: 0 40px;
 
                     span {
                         display: none;
@@ -210,13 +211,20 @@
 }
 
 @media screen and (max-width: 500px) {
-    .upload-con__inner .upload-box .content {
-        .title {
-            font-size: 18px;
+    .upload-con__inner {
+
+        .right .sub {
+            padding: 0;
         }
 
-        .drop-zone {
-            padding: 35px 40px;
+        .upload-box .content {
+            .title {
+                font-size: 18px;
+            }
+
+            .drop-zone {
+                padding: 35px 40px;
+            }
         }
     }
 }
