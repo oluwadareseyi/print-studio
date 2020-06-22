@@ -1,5 +1,6 @@
 import React from "react";
-import Upload from "../LandingTop/Upload/Upload";
+import Upload from "./Upload/Upload";
+// import ProductSlider from "./productSlider/ProductSlider";
 
 const LandingBottom = () => {
   return (
