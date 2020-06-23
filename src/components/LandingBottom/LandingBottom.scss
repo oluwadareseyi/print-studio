@@ -2,11 +2,12 @@
 
 .progress-con {
     padding: 100px 0;
+    position: relative;
 
     .content {
         background: $purple-light;
         padding: 60px 9%;
-        padding-bottom: 100px;
+        padding-bottom: 160px;
         display: flex;
         align-items: center;
 
@@ -77,6 +78,47 @@
             }
         }
     }
+
+    .clients-con {
+        display: flex;
+        justify-content: center;
+        margin-top: -60px;
+    }
+
+    .clients {
+        display: flex;
+        justify-content: center;
+        // position: absolute;
+        box-shadow: 2px 8px 50px 0 $purple-light;
+        height: 120px;
+        // width: 800px;
+
+        .brand {
+            width: 200px;
+            background-repeat: no-repeat;
+            background-blend-mode: luminosity;
+        }
+
+        .coke {
+            background: url("../../assets/images/coke.png") #FFFFFF 50% 50%;
+            background-size: contain;
+        }
+
+        .henny {
+            background: url("../../assets/images/Henny.png") #FFFFFF 50% 50%;
+            background-size: contain;
+        }
+
+        .airtel {
+            background: url("../../assets/images/Airtel.png") #FFFFFF 50% 50%;
+            background-size: contain;
+        }
+
+        .mtn {
+            background: url("../../assets/images/mtn.png") #FFFFFF 50% 50%;
+            background-size: contain;
+        }
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -84,6 +126,8 @@
 
         .content {
             padding: 60px 4%;
+            padding-bottom: 160px;
+
 
             img {
                 width: 36%;
@@ -120,6 +164,7 @@
             text-align: center;
             padding: 60px 10%;
 
+
             .left {
                 button {
                     display: none;
@@ -148,11 +193,40 @@
                 display: none;
             }
         }
+
+        .clients-con {
+            margin-top: -50px;
+        }
+
+        .clients {
+            height: 100px;
+
+            .brand {
+                width: 150px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .progress-con {
+        .clients-con {
+            margin-top: -40px;
+        }
+
+        .clients {
+            height: 80px;
+
+            .brand {
+                width: 130px;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 620px) {
     .progress-con {
+
         .content {
             padding: 60px 3%;
 
@@ -169,6 +243,29 @@
 
                     }
                 }
+            }
+        }
+
+        .clients-con {
+            margin-top: -30px;
+        }
+
+        .clients {
+            height: 60px;
+
+            .brand {
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .progress-con {
+
+        .clients {
+            .brand {
+                width: 80px;
             }
         }
     }

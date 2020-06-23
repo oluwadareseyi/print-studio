@@ -46,6 +46,15 @@ const LandingBottom = () => {
             alt="progress"
           />
         </div>
+
+        <div className="clients-con">
+          <div className="clients">
+            <div className="brand coke"></div>
+            <div className="brand henny"></div>
+            <div className="brand airtel"></div>
+            <div className="brand mtn"></div>
+          </div>
+        </div>
       </div>
     </div>
   );
