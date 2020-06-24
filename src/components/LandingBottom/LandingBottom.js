@@ -1,12 +1,15 @@
 import React from "react";
 import Upload from "./Upload/Upload";
 import "./LandingBottom.scss";
+import Testimonial from "./Testimonial/Testimonial";
 // import ProductSlider from "./productSlider/ProductSlider";
 
 const LandingBottom = () => {
   return (
     <div>
       <Upload />
+
+      {/* Progress and clients */}
       <div className="progress-con">
         <div className="content">
           <div className="left">
@@ -56,6 +59,9 @@ const LandingBottom = () => {
           </div>
         </div>
       </div>
+
+      {/* Testimonial Slider */}
+      <Testimonial />
     </div>
   );
 };
