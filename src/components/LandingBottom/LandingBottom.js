@@ -62,6 +62,10 @@ const LandingBottom = () => {
 
       {/* Testimonial Slider */}
       <Testimonial />
+
+      <div className="started-con">
+        
+      </div>
     </div>
   );
 };
