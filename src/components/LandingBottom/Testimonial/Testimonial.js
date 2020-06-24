@@ -56,9 +56,9 @@ const Testimonial = () => {
             <div className="content__bottom">
               <div className="ratings">
                 <div className="rating-box">
-                  <div className="rating" style={{ width: "90%" }} />
+                  <div className="rating" style={{ width: "92%" }} />
                 </div>
-                <div className="desc">4 Star Ratings</div>
+                <div className="desc">4 Star Rating</div>
               </div>
               <div className="name">-Sarah Fox</div>
             </div>
