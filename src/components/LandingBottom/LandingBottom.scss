@@ -124,7 +124,7 @@
 .started-con {
     background: url("../../assets/images/get-started.jpg") rgba($color: #2D2D2D, $alpha: .5);
     background-size: cover;
-    background-blend-mode: multiply;
+    background-blend-mode: darken;
     background-repeat: no-repeat;
     padding: 120px 0;
     text-align: center;

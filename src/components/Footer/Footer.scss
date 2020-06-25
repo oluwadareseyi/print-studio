@@ -1,0 +1,112 @@
+@import '../../index.scss';
+
+.footer {
+    font-weight: 500;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        background: $purple;
+        color: #ffffff;
+        font-size: 19px;
+        padding: 60px 8%;
+
+        .logo {
+            font-family: 'Century', serif;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+
+        .right {
+            display: flex;
+            justify-content: space-between;
+
+            .contact {
+                margin-left: 120px;
+            }
+        }
+    }
+
+    &__bottom {
+        font-size: 13px;
+        background: #D4BBFF;
+        color: $purple;
+        padding: 40px 8%;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .footer {
+        &__top {
+            padding: 70px 5%;
+            font-size: 16px;
+
+            .right {
+                .contact {
+                    margin-left: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .footer {
+        &__top {
+            .right {
+                .contact {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .footer {
+        &__top {
+            flex-direction: column-reverse;
+            // text-align: center;
+
+            .logo {
+                text-align: center;
+            }
+
+            .right {
+                justify-content: center;
+
+                .contact {
+                    margin-left: 10%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        &__top {
+
+            .right {
+                font-size: 14px;
+                text-align: center;
+
+                br {
+                    display: none;
+                }
+
+                .contact {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &__bottom {
+            padding: 40px 0;
+            justify-content: center;
+        }
+    }
+
+
+}

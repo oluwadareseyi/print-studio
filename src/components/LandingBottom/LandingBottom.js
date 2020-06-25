@@ -2,6 +2,7 @@ import React from "react";
 import Upload from "./Upload/Upload";
 import "./LandingBottom.scss";
 import Testimonial from "./Testimonial/Testimonial";
+import Footer from "../Footer/Footer";
 // import ProductSlider from "./productSlider/ProductSlider";
 
 const LandingBottom = () => {
@@ -63,6 +64,7 @@ const LandingBottom = () => {
       {/* Testimonial Slider */}
       <Testimonial />
 
+      {/* Get started container */}
       <div className="started-con">
         <div className="title">Start Printing With Us Today</div>
         <div className="sub">
@@ -71,6 +73,9 @@ const LandingBottom = () => {
         </div>
         <button className="button">Get Started - It's Free</button>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
