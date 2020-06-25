@@ -17,6 +17,10 @@
         font-size: 38px;
         margin-bottom: 120px;
         text-align: center;
+
+        br {
+            display: none;
+        }
     }
 
     .testimonials {
@@ -158,12 +162,21 @@
     .testimonial-con {
         padding-top: 40px;
 
+        .title {
+            line-height: 1.2;
+            font-size: 34px;
+
+            br {
+                display: block;
+            }
+        }
+
         .arrow {
             display: none;
         }
 
         .testimonial-box {
-            margin: 0 20px;
+            margin: 0 15px;
         }
     }
 }
