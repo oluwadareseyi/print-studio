@@ -64,7 +64,12 @@ const LandingBottom = () => {
       <Testimonial />
 
       <div className="started-con">
-        
+        <div className="title">Start Printing With Us Today</div>
+        <div className="sub">
+          Sign up and become one of the millions of people <br /> around the
+          world using PrintStudio.
+        </div>
+        <button className="button">Get Started - It's Free</button>
       </div>
     </div>
   );
