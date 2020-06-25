@@ -12,7 +12,7 @@
         }
 
         .right {
-            background: url("../../../assets/images/printer.svg") #F1D22A no-repeat 100% 50%;
+            background: url("../../../assets/images/printer.svg") $yellow no-repeat 100% 50%;
             background-size: contain;
             background-blend-mode: overlay;
 
@@ -149,7 +149,7 @@
 @media screen and (max-width: 950px) {
     .upload-con {
         padding: 0 10%;
-        background: #F1D22A;
+        background: $yellow;
 
         &__inner {
             flex-direction: column;

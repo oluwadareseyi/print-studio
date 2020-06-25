@@ -34,7 +34,7 @@
             line-height: 1.3;
 
             span {
-                @include yellowUnderline(#F1D22A);
+                @include yellowUnderline($yellow);
             }
         }
 
@@ -121,9 +121,7 @@
     }
 }
 
-.started-con {
-    
-}
+.started-con {}
 
 @media screen and (max-width: 1050px) {
     .progress-con {
