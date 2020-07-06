@@ -1,0 +1,59 @@
+@import '../../../../index.scss';
+
+.slider-arrow {
+    .arrow {
+        padding: 19px 22px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute;
+
+        img {
+            width: 15px;
+        }
+    }
+
+    .arrow-right {
+        background: $purple;
+        right: -90px;
+        top: 44%;
+    }
+
+    .arrow-left {
+        background: #ffffff;
+        left: -100px;
+        top: 44%;
+        box-shadow: 2px 8px 50px 2px darken($purple-light, 10%);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .slider-arrow {
+        .arrow-left {
+            left: -90px;
+        }
+
+        .arrow-right {
+            right: -70px;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .slider-arrow {
+        .arrow-right {
+            right: -60px;
+        }
+
+        .arrow-left {
+            left: -75px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .slider-arrow {
+        .arrow {
+            display: none;
+        }
+    }
+}

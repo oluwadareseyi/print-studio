@@ -58,23 +58,6 @@
                 font-size: 43px;
                 margin-bottom: 20px;
 
-                // span {
-                //     position: relative;
-                //     z-index: 2;
-
-                //     &::after {
-                //         position: absolute;
-                //         content: "";
-                //         bottom: 8px;
-                //         left: 2px;
-                //         text-align: left;
-                //         width: 50px;
-                //         height: 7px;
-                //         background: #F1D22A;
-                //         z-index: 0;
-                //     }
-                // }
-
                 span {
                     @include yellowUnderline(#F1D22A);
                 }

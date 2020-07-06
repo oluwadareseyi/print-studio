@@ -3,12 +3,14 @@ import Upload from "./Upload/Upload";
 import "./LandingBottom.scss";
 import Testimonial from "./Testimonial/Testimonial";
 import Footer from "../Footer/Footer";
-// import ProductSlider from "./productSlider/ProductSlider";
+import ProductSlider from "./productSlider/ProductSlider";
 
 const LandingBottom = () => {
   return (
     <div>
       <Upload />
+
+      <ProductSlider />
 
       {/* Progress and clients */}
       <div className="progress-con">

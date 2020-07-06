@@ -1,88 +1,87 @@
-/** @jsx jsx */
-import React, { useRef, useEffect, useState } from "react";
-import { css, jsx } from "@emotion/core";
-import "./ProductSlider.scss";
-import ProductGrid from "./ProductGrid";
-
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ProductContent from "./ProductContent";
+import ProductImage from "../../../assets/images/Grid1.png";
 import Grid1 from "../../../assets/images/Grid1.png";
+import Grid2 from "../../../assets/images/Grid2.png";
+import Grid3 from "../../../assets/images/Grid3.png";
+import Grid4 from "../../../assets/images/Grid4.png";
+import Grid5 from "../../../assets/images/Grid5.png";
+import "./Arrows/Arrows";
+import "./ProductSlider.scss";
+import Arrows from "./Arrows/Arrows";
 
 const products = [
-  { img: 1, link: Grid1 },
-  { img: 2, link: Grid1 },
-  { img: 3, link: Grid1 },
-  { img: 4, link: Grid1 },
-  { img: 5, link: Grid1 },
-  { img: 6, link: Grid1 },
-  { img: 7, link: Grid1 },
-  { img: 8, link: Grid1 },
-  { img: 9, link: Grid1 },
+  { src: Grid1 },
+  { src: Grid4 },
+  { src: Grid3 },
+  { src: Grid2 },
+  { src: Grid5 },
+  { src: Grid4 },
+  { src: Grid3 },
+  { src: Grid1 },
+  { src: Grid2 },
+  { src: Grid4 },
+  { src: Grid2 },
+  { src: Grid3 },
 ];
 
-const getWidth = () =>
-  window.innerWidth > 700 ? window.innerWidth - 300 : window.innerWidth - 120;
-
 const ProductSlider = () => {
-  const resizeRef = useRef();
+  const settings = {
+    className: "center",
+    // centerMode: true,
+    infinite: false,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+    rows: 3,
+    slidesPerRow: 1,
+    nextArrow: <Arrows direction="right" />,
+    prevArrow: <Arrows direction="left" />,
+    responsive: [
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
 
-  const [width, setWidth] = useState(getWidth());
-
-  useEffect(() => {
-    resizeRef.current = handleResize;
-  });
-
-  let gridParent = useRef(null);
-  useEffect(() => {
-    // const parent = gridParent;
-    const parentWidth = gridParent.offsetWidth;
-    const resize = () => {
-      resizeRef.current();
-    };
-    const onResize = window.addEventListener("resize", resize);
-
-    const childInView = Array.from(gridParent.children).filter((el) => {
-      return el.offsetLeft > parentWidth - el.offsetWidth + 102;
-    }).length;
-
-    console.log(parentWidth);
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-    };
-  }, []);
-
-  const handleResize = () => {
-    // gridParent.offsetWidth < 961 &&
-    setWidth(getWidth());
-    console.log(width);
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
-
   return (
-    <div
-      css={css`
-        position: relative;
-        margin: 0 auto;
-        width: ${width}px;
-        overflow: hidden;
-        padding: 100px 0;
-      `}
-      // className="product-slider"
-    >
-      <div className="grid-content">
-        <div ref={(e) => (gridParent = e)} className="grid">
-          {/* <ProductGrid products={products} /> */}
-          {products.map((p) => (
-            <div
-              className="box"
-              key={p.img}
-              style={{
-                background: `url(${p.link}) no-repeat`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-            />
-            //   <img src={p.link} alt="" />
-          ))}
+    <div className="slider-container">
+      <div className="topic">Our Products</div>
+      <div className="look">
+        <div className="title">
+          In the meantime, take a look <br /> at our{" "}
+          <span>print projects.</span>
         </div>
+        <div>
+          <button>View All Projects</button>
+        </div>
+      </div>
+      <div className="filter">
+        <div className="filter__item selected">All Categories</div>
+        <div className="filter__item">Recent</div>
+        <div className="filter__item">Business Cards</div>
+        <div className="filter__item">Postcards</div>
+        <div className="filter__item">Brochures</div>
+        <div className="filter__item">Flyers</div>
+      </div>
+      <div className="product-slider">
+        <Slider {...settings}>
+          {products.map((item, i) => (
+            <ProductContent product={item.src} />
+          ))}
+        </Slider>
       </div>
     </div>
   );

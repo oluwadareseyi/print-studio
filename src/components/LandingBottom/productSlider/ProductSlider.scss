@@ -1,49 +1,191 @@
+@import '../../../index.scss';
+
+
+.slider-container {
+    padding: 100px 7%;
+
+    .topic {
+        color: $purple;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .look {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .title {
+            font-weight: 600;
+            font-size: 43px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+
+            span {
+                @include yellowUnderline(#F1D22A);
+            }
+        }
+
+        button {
+            @include button;
+            background: $purple;
+            padding: 12px 20px;
+        }
+    }
+
+    .filter {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 20px 6%;
+        margin-left: 40px;
+        font-weight: 600;
+        margin-bottom: 40px;
+
+        &__item {
+            color: #7B7B7B;
+            cursor: pointer;
+        }
+
+        .selected {
+            color: #000000;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 4px;
+            border-radius: 5px;
+            left: 6px;
+            top: 47%;
+            background: $purple;
+        }
+    }
+}
+
 .product-slider {
-    padding: 100px 0;
-    width: 960px;
-    // margin: 0 auto;
-    // position: relative;
-    // overflow: hidden !important;
+    padding: 0 5%;
+    margin-left: 20px;
 }
 
-
-.grid-content {
-    // width: 78vw;
-    margin: 0 auto !important;
-    // transform: translateX(-150px);
-}
-
-
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-auto-flow: column;
-    grid-gap: 34px;
-    justify-self: center;
-    overflow: hidden;
-    // overflow: hidden;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: flex-start;
-}
-
-.box {
-    width: 300px;
-    height: 230px;
-    // margin: 15px 15px;
+.product-content {
+    width: 95%;
+    height: 220px;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1050px) {
-    .grid {
-        grid-template-columns: repeat(3, 250px);
-        grid-template-rows: repeat(3, 210px);
+    .product-slider {
+        padding: 0 1%;
+        margin-left: 20px;
     }
 
-    .box {
-        width: 100%;
-        height: 210px;
-        // margin: 15px 15px;
+    .slider-container {
+        .filter {
+            padding: 20px 2%;
+
+            &::before {
+                left: -40px;
+                width: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .slider-container {
+        .look .title {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .slider-container {
+        text-align: center;
+
+        .look {
+            flex-direction: column;
+
+            button {
+                display: none;
+            }
+
+            .title {
+                font-size: 38px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .slider-container {
+        .filter {
+            &__item {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .slider-container {
+        .filter {
+            &__item {
+                &:nth-child(6) {
+                    display: none;
+                }
+
+                &:nth-child(5) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 667px) {
+    .product-slider {
+        padding: 0;
+        margin-left: 10px;
+    }
+
+    .slider-container {
+        .look {
+            .title {
+                font-size: 34px;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-slider {
+        padding: 0;
+        margin-left: 0;
+
+        .product-content {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .slider-container {
+        .filter {
+            &__item {
+                font-size: 13px;
+
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
     }
 }
