@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProductContent from "./ProductContent";
-import ProductImage from "../../../assets/images/Grid1.png";
 import Grid1 from "../../../assets/images/Grid1.png";
 import Grid2 from "../../../assets/images/Grid2.png";
 import Grid3 from "../../../assets/images/Grid3.png";
