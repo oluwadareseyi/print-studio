@@ -5,12 +5,12 @@ import Testimonial from "./Testimonial/Testimonial";
 import Footer from "../Footer/Footer";
 import ProductSlider from "./productSlider/ProductSlider";
 
-const LandingBottom = () => {
+const LandingBottom = ({ productRef, footerRef }) => {
   return (
     <div>
       <Upload />
 
-      <ProductSlider />
+      <ProductSlider productRef={productRef} />
 
       {/* Progress and clients */}
       <div className="progress-con">
@@ -77,7 +77,7 @@ const LandingBottom = () => {
       </div>
 
       {/* Footer */}
-      <Footer />
+      <Footer footerRef={footerRef} />
     </div>
   );
 };

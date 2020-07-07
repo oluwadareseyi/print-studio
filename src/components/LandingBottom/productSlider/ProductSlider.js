@@ -27,7 +27,7 @@ const products = [
   { src: Grid3 },
 ];
 
-const ProductSlider = () => {
+const ProductSlider = ({ productRef }) => {
   const settings = {
     className: "center",
     // centerMode: true,
@@ -56,7 +56,7 @@ const ProductSlider = () => {
     ],
   };
   return (
-    <div className="slider-container">
+    <div ref={productRef} className="slider-container">
       <div className="topic">Our Products</div>
       <div className="look">
         <div className="title">
@@ -78,7 +78,7 @@ const ProductSlider = () => {
       <div className="product-slider">
         <Slider {...settings}>
           {products.map((item, i) => (
-            <ProductContent product={item.src} />
+            <ProductContent key={i} product={item.src} />
           ))}
         </Slider>
       </div>

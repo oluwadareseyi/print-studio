@@ -1,9 +1,9 @@
 import React from "react";
 import "./Footer.scss";
 
-const Footer = () => {
+const Footer = ({ footerRef }) => {
   return (
-    <footer className="footer">
+    <footer ref={footerRef} className="footer">
       <div className="footer__top">
         <div className="logo">PrintStudio</div>
         <div className="right">

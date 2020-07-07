@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./LandingTop.scss";
 
-const LandingTop = () => {
+const LandingTop = ({ refs }) => {
+  const aboutRef = useRef();
+  const serviceRef = useRef();
+
+  const scrollTo = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="top-container">
@@ -10,10 +17,18 @@ const LandingTop = () => {
 
           <div className="nav-items">
             <div className="nav-item">Home</div>
-            <div className="nav-item">About us</div>
-            <div className="nav-item">Services</div>
-            <div className="nav-item">Our work</div>
-            <div className="nav-item">Contact us</div>
+            <div onClick={() => scrollTo(aboutRef)} className="nav-item">
+              About us
+            </div>
+            <div onClick={() => scrollTo(serviceRef)} className="nav-item">
+              Services
+            </div>
+            <div onClick={() => scrollTo(refs.product)} className="nav-item">
+              Our work
+            </div>
+            <div onClick={() => scrollTo(refs.footer)} className="nav-item">
+              Contact us
+            </div>
           </div>
 
           <button className="btn-sign-up">Sign up</button>
@@ -38,7 +53,7 @@ const LandingTop = () => {
         </div>
       </div>
 
-      <div className="about-con">
+      <div ref={aboutRef} className="about-con">
         <div className="about-con__left">
           <div className="topic">About Us</div>
           <div className="title">
@@ -63,7 +78,7 @@ const LandingTop = () => {
         </div>
       </div>
 
-      <div className="services-con">
+      <div ref={serviceRef} className="services-con">
         <div className="upper">
           <div className="topic">Our Capabilities</div>
           <div className="head">
