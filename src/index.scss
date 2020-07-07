@@ -5,6 +5,11 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
 $purple: #650088;
 
 $purple-light: #FBF3FE;

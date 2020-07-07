@@ -1,1 +1,37 @@
 @import '../../index.scss';
+
+.signup-container {
+    display: flex;
+    height: 100vh;
+
+    .left {
+        overflow: hidden;
+        position: relative;
+        padding: 0 4%;
+        padding-right: 10%;
+        padding-top: 90px;
+        background: #F4DEFC;
+        // width: 40vw;
+
+        .logo {
+            font-family: 'Century', serif;
+            font-size: 22px;
+            color: $purple;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            color: #E9B300;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 1.3;
+        }
+
+        img {
+            width: 720px;
+            position: absolute;
+            left: -180px;
+            bottom: 0;
+        }
+    }
+}

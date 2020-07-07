@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./LandingTop.scss";
+import { Link } from "react-router-dom";
 
 const LandingTop = ({ refs }) => {
   const aboutRef = useRef();
@@ -30,8 +31,9 @@ const LandingTop = ({ refs }) => {
               Contact us
             </div>
           </div>
-
-          <button className="btn-sign-up">Sign up</button>
+          <Link to="/create">
+            <button className="btn-sign-up">Sign up</button>
+          </Link>
         </header>
         <hr />
 
