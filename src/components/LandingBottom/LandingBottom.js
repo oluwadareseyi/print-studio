@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Upload from "./Upload/Upload";
 import "./LandingBottom.scss";
 import Testimonial from "./Testimonial/Testimonial";
@@ -73,7 +74,9 @@ const LandingBottom = ({ productRef, footerRef }) => {
           Sign up and become one of the millions of people <br /> around the
           world using PrintStudio.
         </div>
-        <button className="button">Get Started - It's Free</button>
+        <Link to="/create">
+          <button className="button">Get Started - It's Free</button>
+        </Link>
       </div>
 
       {/* Footer */}
