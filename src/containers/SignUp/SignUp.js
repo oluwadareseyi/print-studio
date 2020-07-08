@@ -6,7 +6,9 @@ const SignUp = () => {
   return (
     <div className="signup-container">
       <div className="left">
-        <div className="logo">PrintStudio</div>
+        <Link to="/">
+          <div className="logo">PrintStudio</div>
+        </Link>
         <div className="title">
           Sign up and enjoy <br /> All Our Printing Services.
         </div>

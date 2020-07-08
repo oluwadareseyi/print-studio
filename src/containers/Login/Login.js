@@ -6,7 +6,9 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="left">
-        <div className="logo">PrintStudio</div>
+        <Link to="/">
+          <div className="logo">PrintStudio</div>
+        </Link>
         <div className="title">
           Welcome back, <br /> Sign in and resume printing.
         </div>
