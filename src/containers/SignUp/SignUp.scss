@@ -2,22 +2,22 @@
 
 .signup-container {
     display: flex;
-    height: 100vh;
+    // height: 100vh;
 
     .left {
         overflow: hidden;
         position: relative;
         padding: 0 4%;
-        padding-right: 10%;
-        padding-top: 90px;
+        padding-right: 8%;
+        padding-top: 65px;
         background: #F4DEFC;
-        // width: 40vw;
+        width: 41vw;
 
         .logo {
             font-family: 'Century', serif;
             font-size: 22px;
             color: $purple;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .title {
@@ -28,10 +28,332 @@
         }
 
         img {
-            width: 720px;
+            width: 722px;
             position: absolute;
-            left: -180px;
+            left: -145px;
             bottom: 0;
+        }
+    }
+
+    .right {
+        position: relative;
+        padding: 20px 50px;
+        width: 59vw;
+
+        .logo {
+            display: none;
+        }
+
+        .to-sign-in {
+            text-align: right;
+            font-size: 13px;
+            font-weight: 600;
+
+            span {
+                color: #4285F4;
+                cursor: pointer;
+            }
+        }
+
+        .main {
+            padding: 28px 30px;
+            overflow: hidden;
+
+            .title {
+                font-weight: 600;
+                font-size: 22px;
+            }
+
+            .options {
+                padding: 25px 0;
+                // padding-right: 40px;
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    @include button;
+
+                    i {
+                        font-size: 24px;
+                    }
+                }
+
+                .google {
+                    background: #4285F4;
+                    display: flex;
+                    align-items: center;
+                    padding: 12px 60px;
+
+                    i {
+                        margin-right: 30px;
+                        font-weight: 500;
+                    }
+                }
+
+                .social {
+                    padding: 12px 17px;
+                    color: #515151;
+                }
+            }
+
+            .other {
+                text-align: center;
+                position: relative;
+                font-weight: 600;
+                color: #ABABAB;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    background: #707070;
+                    height: 1px;
+                    width: 42%;
+                    left: 0;
+                    top: 50%;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    background: #707070;
+                    height: 1px;
+                    width: 42%;
+                    right: 0;
+                    top: 50%;
+                }
+            }
+        }
+
+        // form
+
+        .sign-form {
+
+            label {
+                margin-top: 20px;
+                display: block;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #333333;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            .terms {
+                display: flex;
+                margin-top: 30px;
+            }
+
+            button {
+                @include button;
+                margin-top: 25px;
+                background: #E9B300;
+            }
+
+            .terms-label {
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 1.4;
+                text-transform: none;
+                margin-bottom: 0;
+                margin-top: 0;
+
+                span {
+                    color: #3751FE;
+                }
+            }
+
+            input {
+                border-radius: 5px;
+                border: none;
+                background: #E6E6E6;
+                outline: none;
+                text-align: left;
+                font-family: Circular-reg, sans-serif;
+                padding: 13px 24px;
+                font-size: 16px;
+                width: calc(100% - 48px);
+            }
+
+            input[type='checkbox'] {
+                width: 25px;
+                height: 25px;
+                margin-right: 20px;
+                // margin-top: -1px;
+            }
+
+
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            input:-webkit-autofill:active {
+                box-shadow: 0 0 0 30px #E6E6E6 inset !important;
+                -webkit-box-shadow: 0 0 0 30px #E6E6E6 inset !important;
+                // font-size: 16px;
+                -webkit-text-fill-color: #000000 !important;
+                // margin-right: 10px;
+            }
+
+            .names {
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    // width: 100%;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .signup-container {
+        .left {
+            padding-right: 4%;
+            width: 46vw;
+
+            img {
+                left: -160px;
+                width: 650px;
+            }
+        }
+
+        .right {
+            padding: 20px 20px;
+
+            .main {
+                .options {
+                    .google {
+                        padding: 12px 50px;
+                    }
+                }
+            }
+
+            .sign-form {
+                .names {
+                    input {
+                        margin-right: -20px;
+                        padding: 13px 18px;
+                        width: calc(100% - 36px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .signup-container {
+
+        .left {
+            .title {
+                font-size: 29px;
+            }
+
+            img {
+                left: -180px;
+            }
+        }
+
+        .right {
+            .sign-form {
+                .names input {
+                    margin-right: -35px;
+                }
+
+                .terms label {
+                    font-size: 12px;
+                }
+            }
+
+            .main .options .google {
+                padding: 12px 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .signup-container {
+        .left {
+            display: none;
+        }
+
+        .right {
+            width: 100vw;
+            padding: 20px 10%;
+
+            .logo {
+                display: block;
+                font-family: 'Century', serif;
+                font-size: 24px;
+                color: $purple;
+                margin-bottom: 20px;
+            }
+
+            .main {
+                padding: 20px 15%;
+            }
+
+            .sign-form .names {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .signup-container {
+        .right {
+            // padding: 20px 5%;
+
+            .main {
+                padding: 20px 10%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .signup-container {
+        .right {
+            // padding: 20px 5%;
+
+            .main {
+                padding: 20px 5%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .signup-container {
+        .right {
+            padding: 20px 5%;
+
+            .main {
+                padding: 20px 2%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .signup-container {
+        .right {
+            padding: 20px 5%;
+
+            .main {
+                .options {
+                    .google {
+                        padding: 12px 15px;
+
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

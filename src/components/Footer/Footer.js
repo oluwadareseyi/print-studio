@@ -23,7 +23,7 @@ const Footer = ({ footerRef }) => {
       </div>
       <div className="footer__bottom">
         <div className="copyright">
-          Copyright 2019 Printstudio Group. All Rights Reserved
+          Copyright 2020 Printstudio Group. All Rights Reserved
         </div>
         <div className="icons"></div>
       </div>
