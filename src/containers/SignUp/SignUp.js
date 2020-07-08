@@ -1,5 +1,6 @@
 import React from "react";
 import "./SignUp.scss";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -14,7 +15,7 @@ const SignUp = () => {
       <div className="right">
         <div className="logo">PrintStudio</div>
         <div className="to-sign-in">
-          Already a member? <span>Sign in</span>
+          Already a member? <Link to="">Sign in</Link>
         </div>
         <div className="main">
           <div className="title">Sign up to PrintStudio</div>
