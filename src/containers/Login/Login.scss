@@ -1,14 +1,14 @@
 @import '../../index.scss';
 
-.signup-container {
+.login-container {
     display: flex;
-    // height: 100vh;
 
     .left {
         overflow: hidden;
         position: relative;
         padding: 0 4%;
-        padding-right: 8%;
+        padding-top: 10%;
+        padding-right: 4%;
         padding-top: 65px;
         background: #F4DEFC;
         width: 41vw;
@@ -28,17 +28,15 @@
         }
 
         img {
-            width: 722px;
+            width: 450px;
             position: absolute;
-            left: -145px;
             bottom: 0;
         }
     }
 
     .right {
         position: relative;
-        padding: 20px 50px;
-        padding-bottom: 0;
+        padding: 30px 50px;
         width: 59vw;
 
         .logo {
@@ -49,6 +47,7 @@
             text-align: right;
             font-size: 13px;
             font-weight: 600;
+            margin-bottom: 80px;
 
             a {
                 color: #4285F4;
@@ -66,7 +65,6 @@
 
             .options {
                 padding: 25px 0;
-                // padding-right: 40px;
                 display: flex;
                 justify-content: space-between;
 
@@ -129,7 +127,7 @@
         .sign-form {
 
             label {
-                margin-top: 20px;
+                margin-top: 30px;
                 display: block;
                 text-transform: uppercase;
                 font-weight: 600;
@@ -138,28 +136,10 @@
                 margin-bottom: 5px;
             }
 
-            .terms {
-                display: flex;
-                margin-top: 30px;
-            }
-
             button {
                 @include button;
-                margin-top: 25px;
+                margin-top: 42px;
                 background: #E9B300;
-            }
-
-            .terms-label {
-                font-size: 13px;
-                font-weight: 500;
-                line-height: 1.4;
-                text-transform: none;
-                margin-bottom: 0;
-                margin-top: 0;
-
-                span {
-                    color: #3751FE;
-                }
             }
 
             input {
@@ -174,13 +154,6 @@
                 width: calc(100% - 48px);
             }
 
-            input[type='checkbox'] {
-                width: 25px;
-                height: 25px;
-                margin-right: 20px;
-                // margin-top: -1px;
-            }
-
 
             input:-webkit-autofill,
             input:-webkit-autofill:hover,
@@ -192,35 +165,23 @@
                 -webkit-text-fill-color: #000000 !important;
                 // margin-right: 10px;
             }
-
-            .names {
-                display: flex;
-                justify-content: space-between;
-
-                input {
-                    // width: 100%;
-                    margin-right: 10px;
-                }
-            }
         }
     }
 }
 
 @media screen and (max-width: 1050px) {
-    .signup-container {
+    .login-container {
         .left {
             padding-right: 4%;
             width: 46vw;
 
             img {
-                left: -160px;
-                width: 650px;
+                width: 400px;
             }
         }
 
         .right {
-            padding: 20px 20px;
-            padding-bottom: 0;
+            padding: 30px 20px;
 
             .main {
                 .options {
@@ -229,22 +190,12 @@
                     }
                 }
             }
-
-            .sign-form {
-                .names {
-                    input {
-                        margin-right: -20px;
-                        padding: 13px 18px;
-                        width: calc(100% - 36px);
-                    }
-                }
-            }
         }
     }
 }
 
 @media screen and (max-width: 995px) {
-    .signup-container {
+    .login-container {
 
         .left {
             .title {
@@ -257,16 +208,6 @@
         }
 
         .right {
-            .sign-form {
-                .names input {
-                    margin-right: -35px;
-                }
-
-                .terms label {
-                    font-size: 12px;
-                }
-            }
-
             .main .options .google {
                 padding: 12px 40px;
             }
@@ -275,7 +216,7 @@
 }
 
 @media screen and (max-width: 950px) {
-    .signup-container {
+    .login-container {
         .left {
             display: none;
         }
@@ -283,6 +224,10 @@
         .right {
             width: 100vw;
             padding: 20px 10%;
+
+            .to-sign-in {
+                margin-bottom: 20px;
+            }
 
             .logo {
                 display: block;
@@ -295,16 +240,12 @@
             .main {
                 padding: 20px 15%;
             }
-
-            .sign-form .names {
-                flex-direction: column;
-            }
         }
     }
 }
 
 @media screen and (max-width: 800px) {
-    .signup-container {
+    .login-container {
         .right {
             // padding: 20px 5%;
 
@@ -316,7 +257,7 @@
 }
 
 @media screen and (max-width: 670px) {
-    .signup-container {
+    .login-container {
         .right {
             // padding: 20px 5%;
 
@@ -328,7 +269,7 @@
 }
 
 @media screen and (max-width: 570px) {
-    .signup-container {
+    .login-container {
         .right {
             padding: 20px 5%;
 
@@ -340,7 +281,7 @@
 }
 
 @media screen and (max-width: 530px) {
-    .signup-container {
+    .login-container {
         .right {
             padding: 20px 5%;
 

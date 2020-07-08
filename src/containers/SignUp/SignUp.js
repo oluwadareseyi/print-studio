@@ -15,7 +15,7 @@ const SignUp = () => {
       <div className="right">
         <div className="logo">PrintStudio</div>
         <div className="to-sign-in">
-          Already a member? <Link to="">Sign in</Link>
+          Already a member? <Link to="/login">Sign in</Link>
         </div>
         <div className="main">
           <div className="title">Sign up to PrintStudio</div>
