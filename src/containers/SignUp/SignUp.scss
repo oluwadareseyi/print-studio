@@ -143,6 +143,10 @@
                 margin-top: 30px;
             }
 
+            .btn {
+                text-align: center;
+            }
+
             button {
                 @include button;
                 margin-top: 25px;
