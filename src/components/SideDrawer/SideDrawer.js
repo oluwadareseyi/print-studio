@@ -13,11 +13,12 @@ const sideDrawer = (props) => {
     <React.Fragment>
       <Backdrop hide={props.hide} show={props.show} />
       <div className={showClass.join(" ")}>
-        <nav className={classes.Nav}>
-          <Link to="/" onClick={props.clicked}>
-            <div className={classes.NavItems}>Home</div>
-          </Link>
+        <Link to="/" onClick={props.clicked}>
+          <div className={classes.Logo}>PrintStudio</div>
+        </Link>
 
+        <hr className={classes.hr} />
+        <nav className={classes.Nav}>
           <Link to="/login" onClick={props.clicked}>
             <div className={classes.NavItems}>Login</div>
           </Link>

@@ -1,31 +1,45 @@
+@import '../../index.scss';
+
 .SideDrawer {
     position: fixed;
     display: block;
     width: 300px;
-    max-width: 70%;
+    max-width: 75%;
     height: 100%;
     right: 0;
     top: 0;
     z-index: 200;
     overflow: scroll;
     background: #ffffff;
-    padding: 32px 16px;
     box-sizing: border-box;
     -webkit-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
 }
 
+.Logo {
+    font-family: 'Century', serif;
+    font-size: 30px;
+    color: $purple;
+    margin-bottom: 20px;
+    padding: 32px 30px;
+    padding-bottom: 20px;
+}
+
+.hr {
+    opacity: .6;
+}
+
 .NavItems {
     margin: 1em 0;
-    margin-left: .5em;
     text-transform: capitalize;
     cursor: pointer;
-    color: #650088;
+    padding: 5px 30px;
+    color: #000000;
 }
 
 .Nav {
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     margin-top: 10px;
 
     a {
@@ -48,9 +62,4 @@
 .Close {
     -webkit-transform: translateX(100%);
     transform: translateX(100%)
-}
-
-.Logo {
-    height: 11%;
-    margin-bottom: 32px;
 }
