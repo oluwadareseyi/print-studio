@@ -15,7 +15,9 @@ const SignUp = () => {
         <img src={require("../../assets/images/signup.png")} alt="" />
       </div>
       <div className="right">
-        <div className="logo">PrintStudio</div>
+        <Link to="/">
+          <div className="logo">PrintStudio</div>
+        </Link>
         <div className="to-sign-in">
           Already a member? <Link to="/login">Sign in</Link>
         </div>
