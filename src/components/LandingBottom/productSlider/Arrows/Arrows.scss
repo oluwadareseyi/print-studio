@@ -63,8 +63,8 @@
         .arrow-mobile {
             display: inline;
             position: absolute;
-            bottom: -40px;
-            right: 46%;
+            bottom: -42px;
+            right: 47%;
 
             img {
                 width: 20px;
@@ -77,11 +77,19 @@
 
         .arrow-left-mobile {
             margin-right: 30px;
-            bottom: -42px;
+            bottom: -43.5px;
 
             img {
                 width: 15px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .slider-arrow {
+        .arrow-mobile {
+            right: 44%;
         }
     }
 }
