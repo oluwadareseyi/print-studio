@@ -10,6 +10,16 @@ const Arrows = ({ direction, onClick }) => {
           alt=""
         />
       </div>
+
+      <div
+        onClick={onClick}
+        className={`arrow-mobile arrow-${direction}-mobile`}
+      >
+        <img
+          src={require(`../../../../assets/images/${direction}-arrow-mob.svg`)}
+          alt=""
+        />
+      </div>
     </div>
   );
 };

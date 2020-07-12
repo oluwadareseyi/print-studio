@@ -24,6 +24,10 @@
         top: 44%;
         box-shadow: 2px 8px 50px 2px darken($purple-light, 10%);
     }
+
+    .arrow-mobile {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -54,6 +58,30 @@
     .slider-arrow {
         .arrow {
             display: none;
+        }
+
+        .arrow-mobile {
+            display: inline;
+            position: absolute;
+            bottom: -40px;
+            right: 46%;
+
+            img {
+                width: 20px;
+            }
+        }
+
+        .arrow-right-mobile {
+            margin-left: 30px;
+        }
+
+        .arrow-left-mobile {
+            margin-right: 30px;
+            bottom: -42px;
+
+            img {
+                width: 15px;
+            }
         }
     }
 }
