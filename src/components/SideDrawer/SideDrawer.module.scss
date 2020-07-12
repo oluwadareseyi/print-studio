@@ -1,0 +1,56 @@
+.SideDrawer {
+    position: fixed;
+    display: block;
+    width: 300px;
+    max-width: 70%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 200;
+    overflow: scroll;
+    background: #ffffff;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    -webkit-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+
+.NavItems {
+    margin: 1em 0;
+    margin-left: .5em;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: #650088;
+}
+
+.Nav {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+@media (min-width: 961px) {
+    .SideDrawer {
+        display: none;
+    }
+}
+
+.Open {
+    -webkit-transform: translate(0);
+    transform: translateX(0)
+}
+
+.Close {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+}
+
+.Logo {
+    height: 11%;
+    margin-bottom: 32px;
+}
