@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "./LandingTop.scss";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const LandingTop = ({ refs }) => {
   const aboutRef = useRef();
@@ -9,6 +10,7 @@ const LandingTop = ({ refs }) => {
   const scrollTo = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
+  const transition = { duration: 2, ease: [0.43, 0.13, 0.23, 0.96] };
 
   return (
     <>
@@ -37,7 +39,12 @@ const LandingTop = ({ refs }) => {
         </header>
         <hr />
 
-        <div className="hero">
+        <motion.div
+          transition={transition}
+          initial={{ y: 20, scale: 0.9 }}
+          animate={{ y: 0, scale: 1 }}
+          className="hero"
+        >
           <div className="left">
             <div className="title">
               Let Us Handle All <br /> Your <span>Printing</span> Needs.
@@ -54,7 +61,7 @@ const LandingTop = ({ refs }) => {
           <div className="right">
             <img src="/hero.png" alt="hero" />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div ref={aboutRef} className="about-con">

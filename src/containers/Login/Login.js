@@ -1,10 +1,22 @@
 import React from "react";
 import "./Login.scss";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const transition = { duration: 2, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const Login = () => {
   return (
-    <div className="login-container">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+        transition: { ...transition, duration: 1 },
+      }}
+      exit={{ opacity: 0, transition: { ...transition, duration: 1 } }}
+      className="login-container"
+    >
       <div className="left">
         <Link to="/">
           <div className="logo">PrintStudio</div>
@@ -59,7 +71,7 @@ const Login = () => {
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

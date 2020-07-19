@@ -1,10 +1,22 @@
 import React from "react";
 import "./SignUp.scss";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const transition = { duration: 2, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const SignUp = () => {
   return (
-    <div className="signup-container">
+    <motion.div
+      exit={{ opacity: 0, transition: { ...transition, duration: 1 } }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+        transition: { ...transition, duration: 1, delay: 0.2 },
+      }}
+      className="signup-container"
+    >
       <div className="left">
         <Link to="/">
           <div className="logo">PrintStudio</div>
@@ -89,7 +101,7 @@ const SignUp = () => {
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

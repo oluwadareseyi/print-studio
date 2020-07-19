@@ -19,17 +19,21 @@ const App = ({ location }) => {
     setDrawer(false);
   };
   return (
-    <div className="App">
+    <>
       <DrawerToggle location={location} toggle={toggleDrawer} />
       <SideDrawer clicked={closeModal} hide={toggleDrawer} show={drawer} />
-      <AnimatePresence initial={false} exitBeforeEnter>
-        <Switch>
-          <Route path="/" exact component={Landing} />
-          <Route path="/create" exact component={SignUp} />
-          <Route path="/login" exact component={Login} />
-        </Switch>
-      </AnimatePresence>
-    </div>
+      <Route
+        render={({ location }) => (
+          <AnimatePresence initial={false} exitBeforeEnter>
+            <Switch location={location} key={location.pathname}>
+              <Route path="/" exact component={Landing} />
+              <Route path="/create" exact component={SignUp} />
+              <Route path="/login" exact component={Login} />
+            </Switch>
+          </AnimatePresence>
+        )}
+      />
+    </>
   );
 };
 
