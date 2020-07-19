@@ -19,9 +19,12 @@ const Landing = () => {
   return (
     <motion.div
       exit={{ opacity: 0, scale: 1.2 }}
-      initial="initial"
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { ...transition, duration: 1 },
+      }}
       transition={transition}
-      animate="animate"
       className="landing"
     >
       <LandingTop refs={refs} />
