@@ -6,6 +6,7 @@ import SignUp from "./containers/SignUp/SignUp";
 import Login from "./containers/Login/Login";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import DrawerToggle from "./components/SideDrawer/DrawerToggle/DrawerToggle";
+import { AnimatePresence } from "framer-motion";
 
 const App = ({ location }) => {
   const [drawer, setDrawer] = useState(false);
@@ -21,11 +22,13 @@ const App = ({ location }) => {
     <div className="App">
       <DrawerToggle location={location} toggle={toggleDrawer} />
       <SideDrawer clicked={closeModal} hide={toggleDrawer} show={drawer} />
-      <Switch>
-        <Route path="/" exact component={Landing} />
-        <Route path="/create" exact component={SignUp} />
-        <Route path="/login" exact component={Login} />
-      </Switch>
+      <AnimatePresence initial={false} exitBeforeEnter>
+        <Switch>
+          <Route path="/" exact component={Landing} />
+          <Route path="/create" exact component={SignUp} />
+          <Route path="/login" exact component={Login} />
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 };

@@ -18,7 +18,7 @@
             font-family: 'Century', serif;
             font-size: 22px;
             color: $purple;
-            margin-bottom: 20px;
+            display: inline;
         }
 
         .title {
@@ -26,6 +26,7 @@
             font-weight: 600;
             font-size: 30px;
             line-height: 1.3;
+            margin-top: 20px;
         }
 
         img {
@@ -235,11 +236,12 @@
             padding: 20px 10%;
 
             .to-sign-in {
+                margin-top: 20px;
                 margin-bottom: 20px;
             }
 
             .logo {
-                display: block;
+                display: inline;
                 font-family: 'Century', serif;
                 font-size: 24px;
                 color: $purple;
