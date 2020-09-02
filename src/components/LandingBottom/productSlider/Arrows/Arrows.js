@@ -1,5 +1,4 @@
 import React from "react";
-import "./Arrows.scss";
 
 const Arrows = ({ direction, onClick }) => {
   return (

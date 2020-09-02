@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import "./LandingTop.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
