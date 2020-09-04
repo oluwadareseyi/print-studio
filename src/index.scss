@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
 
 
 @font-face {
   font-family: 'Gilroy';
   src: url("../src/assets/fonts/Gilroy-Bold.ttf") format("truetype");
-  font-weight: 800;
+  font-weight: 700;
   font-display: swap;
 }
 
@@ -16,19 +22,13 @@
 }
 
 @font-face {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', serif;
   src: url("../src/assets/fonts/Gilroy-Medium.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
-body {
-  overflow-x: hidden;
-}
 
 a {
   text-decoration: none !important;
