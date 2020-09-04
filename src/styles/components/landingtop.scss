@@ -23,6 +23,7 @@
             .nav-item {
                 margin-right: 35px;
                 cursor: pointer;
+                font-size: 15px;
 
                 &:last-of-type {
                     margin-right: 0;
@@ -34,6 +35,8 @@
             @include button;
             background: #F1D22A;
             text-transform: uppercase;
+            font-weight: 600;
+            color: #650088;
         }
     }
 
@@ -46,19 +49,32 @@
 
     .hero {
         display: flex;
-        padding: 70px 7%;
+        padding: 80px 7%;
         justify-content: space-between;
         align-items: center;
         min-height: 70vh;
 
         .left {
-            text-align: center;
             max-width: 50vw;
 
+            @include media("<=950px") {
+                text-align: center;
+                max-width: unset;
+            }
+
+
+
             .title {
-                font-weight: 600;
-                font-size: 43px;
+                font-weight: 800;
+                font-size: 50px;
                 margin-bottom: 20px;
+                text-align: left;
+
+
+
+                @include media("<=950px") {
+                    text-align: center;
+                }
 
                 span {
                     @include yellowUnderline(#F1D22A);
@@ -67,14 +83,29 @@
 
             .sub {
                 font-weight: 500;
-                padding: 0 50px;
+                padding: 0;
                 margin-bottom: 60px;
+                text-align: left;
+
+                @include media("<=950px") {
+                    text-align: center;
+
+                    @include media("<=950px") {
+                        text-align: center;
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
             }
 
             .start {
                 @include button;
                 background: #F1D22A;
                 padding: 10px 30px;
+                font-weight: 600;
+                color: #650088;
             }
         }
 
@@ -258,13 +289,12 @@
         }
 
         .hero {
-            padding: 70px 3%;
+            padding: 70px 3.5%;
 
             .right {
 
                 img {
                     margin-left: 30px;
-                    width: 90%;
                 }
             }
 
@@ -274,7 +304,6 @@
                 }
 
                 .sub {
-                    padding: 0 22px;
                     font-size: 15px;
                 }
             }
@@ -358,7 +387,7 @@
 
             .left {
                 .sub {
-                    padding: 0 20%;
+                    padding: 0 10%;
                 }
 
                 .title {

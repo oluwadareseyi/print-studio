@@ -17,7 +17,7 @@ const LandingTop = ({ refs }) => {
         <header className="header">
           <div className="logo">PrintStudio</div>
 
-          <div className="nav-items">
+          <nav className="nav-items">
             <div className="nav-item">Home</div>
             <div onClick={() => scrollTo(aboutRef)} className="nav-item">
               About us
@@ -31,7 +31,7 @@ const LandingTop = ({ refs }) => {
             <div onClick={() => scrollTo(refs.footer)} className="nav-item">
               Contact us
             </div>
-          </div>
+          </nav>
           <Link to="/create">
             <button className="btn-sign-up">Sign up</button>
           </Link>
@@ -49,7 +49,7 @@ const LandingTop = ({ refs }) => {
               Let Us Handle All <br /> Your <span>Printing</span> Needs.
             </div>
             <div className="sub">
-              PrintStudio is a print space located in Ibadan, Oyo state.
+              PrintStudio is a print space located in Ibadan, Oyo state. <br />
               PrintStudio is the preferred online printer.
             </div>
             <Link to="/create">
