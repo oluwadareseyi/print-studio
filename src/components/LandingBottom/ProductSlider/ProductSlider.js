@@ -59,8 +59,11 @@ const ProductSlider = ({ productRef }) => {
       <div className="topic">Our Products</div>
       <div className="look">
         <div className="title">
-          In the meantime, take a look <br /> at our{" "}
-          <span>print projects.</span>
+          Shop The Most{" "}
+          <span>
+            Amazing <br /> Merch
+          </span>{" "}
+          We Have Made.
         </div>
         <div>
           <button>View All Projects</button>

@@ -18,7 +18,7 @@
     }
 
     .left {
-        // padding-right: 30px;
+        padding-right: 50px;
 
         .topic {
             color: $purple;
@@ -28,9 +28,9 @@
         }
 
         .title {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 40px;
-            margin-bottom: 50px;
+            margin-bottom: 35px;
             line-height: 1.3;
 
             span {
@@ -48,6 +48,7 @@
         button {
             @include button;
             background: $purple;
+            font-weight: 600;
         }
 
         .stats {
@@ -61,7 +62,7 @@
 
                 .number {
                     font-size: 50px;
-                    font-weight: 600;
+                    font-weight: 700;
                     border-right: 2px #000000 solid;
                 }
 
