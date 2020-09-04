@@ -11,7 +11,7 @@
     }
 
     .title {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 38px;
         margin-bottom: 120px;
         text-align: center;
@@ -25,25 +25,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        .arrow {
-            padding: 19px 22px;
-            border-radius: 50%;
-            cursor: pointer;
-
-            img {
-                width: 15px;
-            }
-        }
-
-        .arrow-right {
-            background: $purple;
-        }
-
-        .arrow-left {
-            background: #ffffff;
-            box-shadow: 2px 8px 50px 2px darken($purple-light, 10%);
-        }
     }
 
     .testimonial-box {
@@ -169,9 +150,6 @@
             }
         }
 
-        .arrow {
-            display: none;
-        }
 
         .testimonial-box {
             margin: 0 15px;

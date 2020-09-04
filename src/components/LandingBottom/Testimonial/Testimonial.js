@@ -10,10 +10,6 @@ const Testimonial = () => {
 
       {/* the testimonials container */}
       <div className="testimonials">
-        <div className="arrow arrow-left">
-          <img src={require("../../../assets/images/left-arrow.svg")} alt="" />
-        </div>
-
         {/* one testimonial box */}
         <div className="testimonial-box">
           <div className="profile">
@@ -64,9 +60,6 @@ const Testimonial = () => {
               <div className="name">-Sarah Fox</div>
             </div>
           </div>
-        </div>
-        <div className="arrow arrow-right">
-          <img src={require("../../../assets/images/right-arrow.svg")} alt="" />
         </div>
       </div>
     </div>
