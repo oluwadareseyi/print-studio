@@ -124,7 +124,7 @@
     align-items: center;
 
     &__left {
-        padding-right: 170px;
+        padding-right: 130px;
 
         .topic {
             color: $purple;
@@ -133,8 +133,8 @@
         }
 
         .title {
-            font-weight: 600;
-            font-size: 40px;
+            font-weight: 700;
+            font-size: 42px;
             margin-bottom: 40px;
             line-height: 1.2;
 
@@ -401,7 +401,7 @@
         padding: 100px 5%;
 
         &__left {
-
+            padding-right: 12%;
 
             .title {
                 font-size: 30px;
@@ -412,9 +412,6 @@
             width: 300px;
         }
 
-        &__left {
-            padding-right: 10%;
-        }
     }
 
     .services-con {
