@@ -174,7 +174,7 @@
         position: relative;
 
         .title-2 {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 40px;
             line-height: 1.2;
             position: absolute;
@@ -199,8 +199,8 @@
         align-items: flex-end;
 
         .title {
-            font-weight: 600;
-            font-size: 40px;
+            font-weight: 700;
+            font-size: 42px;
             line-height: 1.3;
             visibility: hidden;
             margin-bottom: -200px;
@@ -208,9 +208,11 @@
         }
 
         .sub {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 500;
+            line-height: 1.4;
             margin-bottom: 10px;
+            padding-right: 30px;
         }
     }
 
@@ -242,7 +244,7 @@
 
                 .title {
                     color: $purple;
-                    font-weight: 600;
+                    font-weight: 700;
                     font-size: 24px;
                     margin-bottom: 5px;
                 }
@@ -349,8 +351,10 @@
             align-items: center;
 
             .sub {
-                font-size: 14px;
+                padding-right: 0;
+                font-size: 15px;
                 margin-bottom: 0;
+                margin-top: 30px;
             }
 
         }
