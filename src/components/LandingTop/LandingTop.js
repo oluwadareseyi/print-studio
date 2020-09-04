@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import "./LandingTop.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -59,7 +58,10 @@ const LandingTop = ({ refs }) => {
           </div>
 
           <div className="right">
-            <img src="/hero.png" alt="hero" />
+            <img
+              src="https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1599070163/Printstudio/hero_xn42pm.jpg"
+              alt="hero"
+            />
           </div>
         </motion.div>
       </div>

@@ -49,9 +49,11 @@
         padding: 70px 7%;
         justify-content: space-between;
         align-items: center;
+        min-height: 80vh;
 
         .left {
             text-align: center;
+            max-width: 50vw;
 
             .title {
                 font-weight: 600;
@@ -81,11 +83,6 @@
                 width: 450px;
                 margin-left: 120px;
             }
-
-
-            // background: url("../../assets/images/hero.png") 50% 50%;
-            // background-size: cover;
-            // width: 100%;
         }
     }
 }
@@ -333,7 +330,7 @@
 
 @media screen and (max-width: 950px) {
     .top-container {
-        background: url('/hero.png') rgba(0, 0, 0, 0.4) 50% 50%;
+        background: url('https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1599070163/Printstudio/hero_xn42pm.jpg') rgba(0, 0, 0, 0.4) 50% 50%;
         background-blend-mode: multiply;
         background-size: cover;
 
@@ -353,6 +350,7 @@
         .hero {
             justify-content: center;
             padding: 150px 3%;
+            min-height: unset;
 
             .right {
                 display: none;

@@ -1,5 +1,4 @@
 import React from "react";
-import "./SignUp.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 

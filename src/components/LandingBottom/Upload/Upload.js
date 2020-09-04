@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import "./Upload.scss";
 
 const Upload = () => {
   const inputRef = useRef(null);

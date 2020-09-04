@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Upload from "./Upload/Upload";
-import "./LandingBottom.scss";
 import Testimonial from "./Testimonial/Testimonial";
 import Footer from "../Footer/Footer";
-import ProductSlider from "./productSlider/ProductSlider";
+import ProductSlider from "./ProductSlider/ProductSlider";
 
 const LandingBottom = ({ productRef, footerRef }) => {
   return (

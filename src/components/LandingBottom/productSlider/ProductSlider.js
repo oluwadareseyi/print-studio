@@ -9,7 +9,6 @@ import Grid3 from "../../../assets/images/Grid3.png";
 import Grid4 from "../../../assets/images/Grid4.png";
 import Grid5 from "../../../assets/images/Grid5.png";
 import "./Arrows/Arrows";
-import "./ProductSlider.scss";
 import Arrows from "./Arrows/Arrows";
 
 const products = [
