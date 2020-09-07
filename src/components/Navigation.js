@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Cart } from "../assets/images/cart.svg";
+import { CartContext } from "../data/CartContext";
 
 const Navigation = () => {
+  const { cart } = useContext(CartContext);
+
   return (
     <header className="shop-header">
       <div className="logo">PRINTSTUDIO</div>
@@ -12,7 +15,7 @@ const Navigation = () => {
         <div className="nav-item">Contact Us</div>
       </nav>
       <div className="right">
-        <div className="svg-con cart-active">
+        <div className={`svg-con ${cart.length ? "cart-active" : ""}`}>
           <Cart />
         </div>
         <Link to="/create">

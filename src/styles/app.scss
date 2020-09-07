@@ -14,3 +14,8 @@
 @import './components/productslider.scss';
 @import './components/testimonial.scss';
 @import './components/upload.scss';
+
+.max-width {
+    max-width: 1440px;
+    margin: 0 auto;
+}

@@ -1,12 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Navigation from "../components/Navigation";
 import { useParams } from "react-router-dom";
 import products from "../data/shopdata.json";
 import { motion } from "framer-motion";
+import { CartContext } from "../data/CartContext";
 
 const ProductDetail = () => {
+  const { addCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
   const [product, setProduct] = useState({});
+  const [cartText, setCartText] = useState("Add to Cart");
+
+  const addToCart = (cartData, quantity) => {
+    addCart(cartData, quantity);
+    setCartText("Added!");
+  };
 
   const params = useParams();
 
@@ -25,15 +33,25 @@ const ProductDetail = () => {
     setQuantity((state) => state + 1);
   };
   return (
-    <motion.div exit>
-      <Navigation />
+    <motion.div exit className="product_container">
+      <nav>
+        <Navigation />
+      </nav>
       <section className="product-detail">
         <div className="left content">
-          <div className="box"></div>
+          <div
+            className="box"
+            style={{
+              backgroundImage: `url(${product.image})`,
+            }}
+          ></div>
           <div className="box"></div>
           <div className="box"></div>
         </div>
-        <div className="middle content"></div>
+        <div
+          className="middle content"
+          style={{ backgroundImage: `url(${product.image})` }}
+        ></div>
         <div className="right content">
           <div className="back">Back to shop</div>
           <div className="product-name">{product.title}</div>
@@ -65,7 +83,9 @@ const ProductDetail = () => {
             <div className="right-panel">Price: ${500 * quantity}.00</div>
           </div>
           <div className="product-actions">
-            <button>Add to cart</button>
+            <button onClick={() => addToCart(product, quantity)}>
+              {cartText}
+            </button>
             <button>Wishlist</button>
           </div>
         </div>

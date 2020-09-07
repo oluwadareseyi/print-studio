@@ -59,7 +59,7 @@ const LandingTop = ({ refs }) => {
 
           <div className="right">
             <img
-              src="https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1599070163/Printstudio/hero_xn42pm.jpg"
+              src="https://res.cloudinary.com/dmwfd0zhh/image/upload/q_auto,f_auto/v1599430264/Printstudio/hero_xn42pm-removebg-preview_elf6cq.png"
               alt="hero"
             />
           </div>

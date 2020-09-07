@@ -4,11 +4,13 @@ import "./index.scss";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-
+import CartProvider from "./data/CartContext";
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </React.StrictMode>
   </Router>,
   document.getElementById("root")

@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 
 const Commerce = () => {
   return (
-    <motion.div className="commerce_page" exit>
+    <motion.div className="commerce_page max-width" exit>
       <Navigation />
       <section className="shop__hero">
         <div className="main">

@@ -1,3 +1,11 @@
+.product_container {
+    nav {
+        @include media("<=950px") {
+            display: none;
+        }
+    }
+}
+
 .product-detail {
     display: grid;
     min-height: 90vh;
@@ -6,6 +14,21 @@
     grid-template-columns: 12% 1fr 1fr;
     grid-gap: 50px;
     font-weight: 600;
+
+    @include media("<=1100px") {
+        grid-gap: 30px;
+        padding: 80px 30px;
+    }
+
+    @include media("<=950px") {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        padding: 0;
+    }
+
+    @include media("<=650px") {
+        grid-template-rows: .8fr 1fr;
+    }
 
 
     .content {
@@ -17,29 +40,60 @@
         justify-content: center;
         align-items: center;
         grid-template-rows: repeat(3, 200px);
-        grid-row-gap: 30px;
+        grid-gap: 30px;
         padding: 0 20px;
+
+        @include media("<=1100px") {
+            padding: 0 10px;
+        }
+
+        @include media("<=950px") {
+            display: none;
+        }
 
         .box {
             width: 100%;
             height: 90px;
             background: #aaaaaa;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 30%;
 
+            @include media("<=1100px") {
+                // height: 70px;
+            }
         }
     }
 
     .middle {
-        background: #aaaaaa;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
     }
 
     .right {
         padding: 10px 0;
         padding-right: 25px;
 
+        @include media("<=950px") {
+            padding: 80px 50px;
+            padding-top: 30px;
+            padding-right: 150px;
+        }
+
+        @include media("<=500px") {
+            padding: 30px;
+            // padding-top: 30px;
+        }
+
         .back {
             font-weight: 300;
             font-size: 18px;
             margin-bottom: 35px;
+
+            @include media("<=1100px") {
+                margin-bottom: 20px;
+            }
         }
 
         .product {
@@ -47,6 +101,14 @@
                 font-size: 42px;
                 font-weight: 600;
                 margin-bottom: 10px;
+
+                @include media("<=1100px") {
+                    font-size: 35px;
+                }
+
+                @include media("<450px") {
+                    font-size: 30px;
+                }
             }
 
             &-desc {
@@ -54,11 +116,19 @@
                 margin-top: 50px;
                 line-height: 1.5;
                 margin-bottom: 40px;
+
+                @include media("<=1100px") {
+                    margin-top: 30px;
+                }
             }
 
             &-tags {
                 color: #7D7D7D;
                 margin-bottom: 55px;
+
+                @include media("<=950px") {
+                    margin-bottom: 20px;
+                }
             }
 
             &-panel {
@@ -66,13 +136,27 @@
                 justify-content: space-between;
                 align-items: center;
 
+                @include media("<=950px") {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-bottom: 40px;
+                }
+
                 .left-panel {
                     display: flex;
                     align-items: center;
 
+                    @include media("<=950px") {
+                        margin-bottom: 10px;
+                    }
+
                     .title {
                         font-weight: 700;
                         font-size: 20px;
+
+                        @include media("<=1100px") {
+                            font-size: 18px;
+                        }
                     }
 
                     .plus,
@@ -94,6 +178,10 @@
                 .right-panel {
                     font-weight: 700;
                     font-size: 20px;
+
+                    @include media("<=1100px") {
+                        font-size: 18px;
+                    }
                 }
             }
 
@@ -102,10 +190,12 @@
 
                 button {
                     @include button;
-                    background: #000000;
+                    font-family: 'Gilroy', sans-serif;
+                    background: #650088;
                     border-radius: 0;
                     font-size: 17px;
-                    padding: 15px 20px;
+                    padding: 15px 30px;
+                    font-weight: 600;
 
                     &:first-child {
                         margin-right: 30px;

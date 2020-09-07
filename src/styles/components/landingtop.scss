@@ -3,6 +3,7 @@
 .top-container {
     background: linear-gradient(120.14deg, #775ba7, #4F3180 122.55%);
     color: #ffffff;
+    max-width: 1440px;
 
     .header {
         display: flex;
@@ -18,7 +19,7 @@
 
         .nav-items {
             display: flex;
-            font-weight: 500;
+            font-weight: 600;
 
             .nav-item {
                 margin-right: 35px;
@@ -82,7 +83,7 @@
             }
 
             .sub {
-                font-weight: 500;
+                font-weight: 600;
                 padding: 0;
                 margin-bottom: 60px;
                 text-align: left;
@@ -145,7 +146,7 @@
 
         .sub {
             font-size: 19px;
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 40px;
 
             p {
@@ -208,7 +209,7 @@
 
         .sub {
             font-size: 19px;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 1.4;
             margin-bottom: 10px;
             padding-right: 30px;
@@ -250,7 +251,7 @@
 
                 .sub {
                     color: #615F61;
-                    font-weight: 500;
+                    font-weight: 600;
                 }
             }
         }

@@ -18,11 +18,14 @@ const Landing = () => {
 
   return (
     <motion.div
-      exit
-      initial
-      animate
+      exit={{ opacity: 0, scale: 1.2 }}
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { ...transition, duration: 1 },
+      }}
       transition={transition}
-      className="landing"
+      className="landing max-width"
     >
       <LandingTop refs={refs} />
       <LandingBottom footerRef={footer} productRef={product} />
