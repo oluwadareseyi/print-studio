@@ -74,6 +74,7 @@
     .right {
         padding: 10px 0;
         padding-right: 25px;
+        justify-content: center;
 
         @include media("<=950px") {
             padding: 80px 50px;
@@ -186,7 +187,7 @@
             }
 
             &-actions {
-                margin-top: auto;
+                margin-top: 60px;
 
                 button {
                     @include button;
@@ -194,11 +195,17 @@
                     background: #650088;
                     border-radius: 0;
                     font-size: 17px;
-                    padding: 15px 30px;
+                    padding: 15px 40px;
                     font-weight: 600;
 
                     &:first-child {
                         margin-right: 30px;
+                    }
+
+                    &:last-of-type {
+                        background: transparent;
+                        border: 1px solid #650088;
+                        color: #650088;
                     }
                 }
             }

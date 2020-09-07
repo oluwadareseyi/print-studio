@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import Navigation from "../components/Navigation";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import products from "../data/shopdata.json";
 import { motion } from "framer-motion";
 import { CartContext } from "../data/CartContext";
@@ -53,7 +53,9 @@ const ProductDetail = () => {
           style={{ backgroundImage: `url(${product.image})` }}
         ></div>
         <div className="right content">
-          <div className="back">Back to shop</div>
+          <Link to="/shop" className="back">
+            Back to shop
+          </Link>
           <div className="product-name">{product.title}</div>
           <div className="ratings">
             <div className="rating-box">
