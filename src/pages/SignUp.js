@@ -23,7 +23,7 @@ const SignUp = () => {
         <div className="title">
           Sign up and enjoy <br /> All Our Printing Services.
         </div>
-        <img src={require("../../assets/images/signup.png")} alt="" />
+        <img src={require("../assets/images/signup.png")} alt="" />
       </div>
       <div className="right">
         <Link to="/">

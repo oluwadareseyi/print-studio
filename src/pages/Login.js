@@ -23,7 +23,7 @@ const Login = () => {
         <div className="title">
           Welcome back, <br /> Sign in and resume printing.
         </div>
-        <img src={require("../../assets/images/login.png")} alt="" />
+        <img src={require("../assets/images/login.png")} alt="" />
       </div>
       <div className="right">
         <Link to="/">

@@ -20,6 +20,10 @@
     .left {
         padding-right: 50px;
 
+        @include media("<950px") {
+            padding-right: 0;
+        }
+
         .topic {
             color: $purple;
             font-weight: 600;
@@ -151,6 +155,7 @@
         padding: 15px 30px;
         font-size: 15px;
         color: #650088;
+        font-weight: 600;
     }
 }
 

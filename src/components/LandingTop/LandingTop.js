@@ -32,8 +32,8 @@ const LandingTop = ({ refs }) => {
               Contact us
             </div>
           </nav>
-          <Link to="/create">
-            <button className="btn-sign-up">Sign up</button>
+          <Link to="/shop">
+            <button className="btn-sign-up">Shop Now</button>
           </Link>
         </header>
         <hr />
