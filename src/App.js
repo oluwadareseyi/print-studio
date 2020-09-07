@@ -9,6 +9,7 @@ import DrawerToggle from "./components/SideDrawer/DrawerToggle/DrawerToggle";
 import { AnimatePresence } from "framer-motion";
 import Commerce from "./pages/Commerce";
 import ProductDetail from "./pages/ProductDetail";
+import ScrollTop from "./components/ScrollTop";
 
 const App = ({ location }) => {
   const [drawer, setDrawer] = useState(false);
@@ -24,6 +25,7 @@ const App = ({ location }) => {
     <>
       <DrawerToggle location={location} toggle={toggleDrawer} />
       <SideDrawer clicked={closeModal} hide={toggleDrawer} show={drawer} />
+      <ScrollTop />
       <Route
         render={({ location }) => (
           <AnimatePresence initial={false} exitBeforeEnter>
