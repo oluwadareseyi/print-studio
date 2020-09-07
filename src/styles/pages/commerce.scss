@@ -1,4 +1,6 @@
 .commerce_page {
+    font-weight: 600;
+
     .shop__hero {
         padding: 60px 130px;
         padding-top: 130px;
@@ -272,7 +274,6 @@
                     background: $white;
                     outline: none;
                     text-align: left;
-                    font-family: 'Inter', sans-serif;
                     font-weight: 500;
                     color: #474747;
                     padding: 25px 0;
@@ -334,7 +335,7 @@
     .promo {
         padding: 80px;
 
-        @include media("<=phone") {
+        @include media("<=500px") {
             padding: 80px 20px;
         }
 
@@ -348,6 +349,10 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             grid-gap: 40px;
+
+            @include media("<=500px") {
+                grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            }
         }
 
         .box {
@@ -360,6 +365,11 @@
             color: $white;
             font-weight: 600;
             padding: 0 40px;
+
+            @include media("<=phone") {
+                font-size: 30px;
+                padding: 0 30px;
+            }
         }
 
         .box-1 {
@@ -377,6 +387,10 @@
             background-repeat: no-repeat;
             background-position: 50% 50%;
             justify-content: flex-end;
+
+            @include media("<=phone") {
+                justify-content: flex-start;
+            }
         }
     }
 }

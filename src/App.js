@@ -8,6 +8,7 @@ import SideDrawer from "./components/SideDrawer/SideDrawer";
 import DrawerToggle from "./components/SideDrawer/DrawerToggle/DrawerToggle";
 import { AnimatePresence } from "framer-motion";
 import Commerce from "./pages/Commerce";
+import ProductDetail from "./pages/ProductDetail";
 
 const App = ({ location }) => {
   const [drawer, setDrawer] = useState(false);
@@ -31,6 +32,7 @@ const App = ({ location }) => {
               <Route path="/create" exact component={SignUp} />
               <Route path="/login" exact component={Login} />
               <Route path="/shop" exact component={Commerce} />
+              <Route path="/product/:id" exact component={ProductDetail} />
             </Switch>
           </AnimatePresence>
         )}

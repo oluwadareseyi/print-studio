@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { ReactComponent as Arrow } from "../assets/images/shop-arrow.svg";
 import shopData from "../data/shopdata.json";
 import ShopArrow from "./ShopArrow";
+import { Link } from "react-router-dom";
 
 const CommerceSlider = () => {
   const settings = {
@@ -51,17 +52,17 @@ const CommerceSlider = () => {
 
       <div className="commerce-container">
         <Slider {...settings}>
-          {shopData.map(({ image, id, title }) => (
-            <div key={id} className="box-container">
+          {shopData.map((product) => (
+            <div key={product.id} className="box-container">
               <div
                 style={{
-                  backgroundImage: `url(${image})`,
+                  backgroundImage: `url(${product.image})`,
                 }}
                 className="top"
               ></div>
               <div className="bottom">
                 <div className="top-content">
-                  <div className="title">{title}</div>
+                  <div className="title">{product.title}</div>
                   <div className="desc">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Tenetur eaque dolor cupiditate? Sunt, exercitationem. Sequi,
@@ -81,7 +82,15 @@ const CommerceSlider = () => {
                     </div>
                   </div>
                   <button>
-                    <span> View Details</span> <Arrow />
+                    <Link
+                      to={{
+                        pathname: `/product/${product.id}`,
+                        state: { product },
+                      }}
+                      key={product.id}
+                    >
+                      <span> View Details</span> <Arrow />
+                    </Link>
                   </button>
                 </div>
               </div>

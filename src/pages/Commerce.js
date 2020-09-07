@@ -46,10 +46,10 @@ const Commerce = () => {
         <div className="title">Collection Sales</div>
         <div className="boxes">
           <div className="box box-1">
-            50% off for women <br /> summer t-shirts
+            50% off for women's <br /> summer t-shirts
           </div>
           <div className="box box-2">
-            50% off for men <br /> summer hoodies
+            50% off for men's <br /> summer hoodies
           </div>
         </div>
       </section>
