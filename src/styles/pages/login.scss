@@ -15,7 +15,7 @@
         width: 41vw;
 
         .logo {
-            font-family: 'Century', serif;
+            font-family: $poppins;
             font-size: 22px;
             color: $purple;
             display: inline;
@@ -242,7 +242,7 @@
 
             .logo {
                 display: inline;
-                font-family: 'Century', serif;
+                font-family: $poppins;
                 font-size: 24px;
                 color: $purple;
                 margin-bottom: 20px;
