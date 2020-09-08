@@ -434,4 +434,34 @@ $greyText: #788995;
         }
     }
 
+
+    // specific to payment
+
+    .tab-form {
+        .payment-options {
+            .radio-form {
+                display: block;
+
+                .desc {
+                    padding-left: 26px;
+                }
+
+                .radio {
+                    margin-top: 0;
+                    padding: 0;
+                    margin-bottom: 10px;
+                }
+
+                .box {
+                    height: unset;
+                    padding: 30px 20px;
+
+                    &:first-of-type {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+
 }

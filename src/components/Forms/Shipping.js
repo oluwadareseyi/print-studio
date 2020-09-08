@@ -20,8 +20,8 @@ const Shipping = ({ setSelectedTab }) => {
         <div className="box">
           <div className="radio">
             <div className="radio-input">
-              <input value="standard" type="radio" name="available" />
-              <label htmlFor="available">Standard Delivery</label>
+              <input value="standard" type="radio" name="shipping" />
+              <label htmlFor="standard">Standard Delivery</label>
             </div>
             <div className="radio-cost">Free</div>
           </div>
@@ -34,8 +34,8 @@ const Shipping = ({ setSelectedTab }) => {
         <div className="box">
           <div className="radio">
             <div className="radio-input">
-              <input value="standard" type="radio" name="available" />
-              <label htmlFor="available">Fast Delivery</label>
+              <input value="fast" type="radio" name="shipping" />
+              <label htmlFor="fast">Fast Delivery</label>
             </div>
             <div className="radio-cost">8000 NGN</div>
           </div>
@@ -47,7 +47,7 @@ const Shipping = ({ setSelectedTab }) => {
       </form>
       <div className="panels">
         <div onClick={() => setSelectedTab("customer")} className="return">
-          <span>&#8592;</span> Back to Shipping Info
+          <span>&#8592;</span> Back to Customer Info
         </div>
 
         <button onClick={() => setSelectedTab("payment")}>To Payment</button>

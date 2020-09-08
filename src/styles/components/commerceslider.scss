@@ -250,6 +250,11 @@
         right: 52%;
         box-shadow: 0px 8px 44px -12px rgba(27, 58, 146, 0.3);
         bottom: -8%;
+
+        @include media("<=600px") {
+            padding: 10px 20px;
+            right: 55%;
+        }
     }
 
     .arrow-right {
@@ -258,5 +263,9 @@
 
     .fas {
         font-size: 30px;
+
+        @include media("<=600px") {
+            font-size: 18px;
+        }
     }
 }
