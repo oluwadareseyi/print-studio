@@ -8,7 +8,9 @@ const Navigation = () => {
 
   return (
     <header className="shop-header">
-      <div className="logo">PRINTSTUDIO</div>
+      <div className="logo">
+        <Link to="/">PRINTSTUDIO</Link>
+      </div>
       <nav className="nav-items">
         <div className="nav-item">Features</div>
         <div className="nav-item">Pricing</div>

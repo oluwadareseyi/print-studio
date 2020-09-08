@@ -1,6 +1,14 @@
 $borderColor:#cad1d6;
 $greyText: #788995;
 
+.checkout-nav {
+    display: none;
+
+    @include media("<=950px") {
+        display: block;
+    }
+}
+
 .checkout__container {
     font-weight: 600;
     min-height: 100vh;
@@ -143,7 +151,7 @@ $greyText: #788995;
             padding: 55px 0;
 
             @include media("<=950px") {
-                padding-top: 30px;
+                padding-top: 0;
             }
         }
 
