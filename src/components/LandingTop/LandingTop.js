@@ -52,8 +52,8 @@ const LandingTop = ({ refs }) => {
               PrintStudio is a print space located in Ibadan, Oyo state. <br />
               PrintStudio is the preferred online printer.
             </div>
-            <Link to="/create">
-              <button className="start">Get Started</button>
+            <Link to="/shop">
+              <button className="start">Shop Now</button>
             </Link>
           </div>
 

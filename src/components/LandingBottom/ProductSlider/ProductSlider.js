@@ -66,16 +66,16 @@ const ProductSlider = ({ productRef }) => {
           We Have Made.
         </div>
         <div>
-          <button>View All Projects</button>
+          <button>Visit Store</button>
         </div>
       </div>
       <div className="filter">
         <div className="filter__item selected">All Categories</div>
         <div className="filter__item">Recent</div>
-        <div className="filter__item">Business Cards</div>
-        <div className="filter__item">Postcards</div>
+        <div className="filter__item">Shirts</div>
+        <div className="filter__item">Shoes</div>
+        <div className="filter__item">Mugs</div>
         <div className="filter__item">Brochures</div>
-        <div className="filter__item">Flyers</div>
       </div>
       <div className="product-slider">
         <Slider {...settings}>
