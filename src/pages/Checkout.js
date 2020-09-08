@@ -20,7 +20,7 @@ const Checkout = () => {
   useEffect(() => {
     let price = 0;
     cart &&
-      cart.map((item) => {
+      cart.forEach((item) => {
         price = price + item.quantity * 500;
       });
     setTotal(price);

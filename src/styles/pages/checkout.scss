@@ -1,3 +1,6 @@
+$borderColor:#cad1d6;
+$greyText: #788995;
+
 .checkout__container {
     font-weight: 600;
     min-height: 100vh;
@@ -169,6 +172,18 @@
                 -webkit-text-fill-color: #474747 !important;
             }
 
+            /* Chrome, Safari, Edge, Opera */
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            /* Firefox */
+            input[type=number] {
+                -moz-appearance: textfield;
+            }
+
             // .customer-form {
             //     margin-bottom: 30px;
             // }
@@ -181,6 +196,7 @@
 
                 .return {
                     color: #788995;
+                    cursor: pointer;
 
                     span {
                         margin-right: 10px;
@@ -192,7 +208,7 @@
                     border-radius: 0;
                     background: #74079B;
                     font-size: 11px;
-                    padding: 15px 25px;
+                    padding: 15px 30px;
                     font-weight: 600;
                     text-transform: uppercase;
                 }
@@ -270,6 +286,82 @@
         padding-top: 50px;
     }
 
+    // specific to shipping;
 
+    .tab-form {
+        .location {
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+
+        .box {
+            height: 220px;
+            border: 1px solid $borderColor;
+        }
+
+        .map {
+            background-image: url("https://res.cloudinary.com/dmwfd0zhh/image/upload/v1599550262/Printstudio/map_zipag4.png");
+        }
+
+        .address {
+            padding-right: 60px;
+            padding-left: 30px;
+            font-size: 14px;
+
+            &-name {
+                margin-top: 30px;
+                color: $greyText;
+                line-height: 1.7;
+                margin-bottom: 30px;
+            }
+
+            .edit {
+                color: #74079B;
+                cursor: pointer;
+            }
+        }
+
+        .radio-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+            margin: 30px 0;
+
+            .radio {
+                padding: 0 30px;
+                margin: 30px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .radio-input {
+                    display: flex;
+                    align-items: center;
+                }
+
+                &-cost {
+                    font-size: 14px;
+                }
+
+                label {
+                    // display: inline;
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    margin: 0;
+                    margin-top: 2px;
+                    margin-left: 5px;
+                }
+            }
+
+            .desc {
+                padding: 0 56px;
+                color: $greyText;
+                font-size: 14px;
+                line-height: 1.3;
+            }
+        }
+    }
 
 }
