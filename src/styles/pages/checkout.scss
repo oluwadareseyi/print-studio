@@ -1,0 +1,275 @@
+.checkout__container {
+    font-weight: 600;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 24%;
+
+
+    // cart details
+    .right {
+        background: #EEE5FE;
+        padding: 0 40px;
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+
+            .title {
+                font-size: 20px;
+            }
+
+            .number {
+                height: 20px;
+                width: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100px;
+                background: #6D4C99;
+                color: $white;
+                font-size: 12px;
+            }
+        }
+
+        &__middle {
+            margin-top: 50px;
+            font-size: 12px;
+
+            .cart-con {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+
+                .cart-img {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    width: 38%;
+                    height: 70px;
+                    margin-right: 20px;
+                }
+
+                .details {
+                    color: #788995;
+
+                    .price {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .voucher {
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+
+            .costing {
+                color: #788995;
+                margin-top: 20px;
+                margin-bottom: 25px;
+
+                .sub-total {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 15px;
+                }
+
+
+                .shipping {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+            }
+
+            .total {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #000000;
+                margin-top: 20px;
+                font-size: 13px;
+            }
+
+        }
+    }
+
+    .left {
+        padding: 0 120px;
+
+        // .top {
+        //     // margin-bottom: 60px;
+        // }
+
+        .bottom {
+            padding: 55px 0;
+        }
+
+
+        .tab-form {
+            .title {
+                font-size: 20px;
+            }
+
+            label {
+                text-transform: uppercase;
+                margin-top: 20px;
+                display: block;
+                text-transform: uppercase;
+                color: #4E4E4E;
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 5px;
+
+                // @include media("<=1040px") {
+                //     font-size: 12px;
+                // }
+            }
+
+            input[type=text],
+            input[type=tel],
+            input[type=number],
+            select {
+                border-radius: 0;
+                border: 1px solid #cad1d6;
+                background: $white;
+                outline: none;
+                text-align: left;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                color: #474747;
+                padding: 16px 0;
+                text-indent: 10px;
+                font-size: 13px;
+                width: 100%;
+                box-sizing: border-box;
+
+
+                &::placeholder {
+                    color: #989898;
+                    font-weight: 500;
+                }
+
+                &:focus {
+                    border: 1px solid #71B6EF;
+                }
+            }
+
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            input:-webkit-autofill:active {
+                box-shadow: 0 0 0 30px $white inset !important;
+                -webkit-box-shadow: 0 0 0 30px $white inset !important;
+                -webkit-text-fill-color: #474747 !important;
+            }
+
+            // .customer-form {
+            //     margin-bottom: 30px;
+            // }
+
+            .panels {
+                display: flex;
+                margin-top: 50px;
+                justify-content: space-between;
+                align-items: center;
+
+                .return {
+                    color: #788995;
+
+                    span {
+                        margin-right: 10px;
+                    }
+                }
+
+                button {
+                    @include button;
+                    border-radius: 0;
+                    background: #74079B;
+                    font-size: 11px;
+                    padding: 15px 25px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .input-con {
+            margin-bottom: 10px;
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            .side {
+                width: 47%;
+            }
+
+            .side-btn {
+                display: flex;
+
+                input {
+                    border-right: 0;
+                }
+
+                button {
+                    @include button;
+                    border-radius: 0;
+                    border: 1px solid #cad1d6;
+                    background: $white;
+                    color: #0095F8;
+                    font-size: 11px;
+                    padding: 10px 25px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        // tabs
+        .tabs-con {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            text-transform: uppercase;
+            padding-bottom: 15px;
+
+
+            .tab {
+                cursor: pointer;
+                padding: 0 30px;
+            }
+
+            .active {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    height: 2px;
+                    width: 100%;
+                    bottom: -24.5px;
+                    background: #000;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+
+    }
+
+    .left,
+    .right {
+        padding-top: 50px;
+    }
+
+
+
+}

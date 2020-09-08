@@ -15,8 +15,12 @@ const Navigation = () => {
         <div className="nav-item">Contact Us</div>
       </nav>
       <div className="right">
-        <div className={`svg-con ${cart.length ? "cart-active" : ""}`}>
-          <Cart />
+        <div
+          className={`svg-con ${cart.length ? "cart-active" : "cart-inactive"}`}
+        >
+          <Link to="/checkout">
+            <Cart />
+          </Link>
         </div>
         <Link to="/create">
           <button>Sign Up</button>

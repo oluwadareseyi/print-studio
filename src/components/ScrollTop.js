@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 function ScrollTop() {
-  console.log("Rendering...");
   const history = useHistory();
   useEffect(() => {
     const unlisten = history.listen(() => {

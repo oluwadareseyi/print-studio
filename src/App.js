@@ -10,6 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import Commerce from "./pages/Commerce";
 import ProductDetail from "./pages/ProductDetail";
 import ScrollTop from "./components/ScrollTop";
+import Checkout from "./pages/Checkout";
 
 const App = ({ location }) => {
   const [drawer, setDrawer] = useState(false);
@@ -35,6 +36,7 @@ const App = ({ location }) => {
               <Route path="/login" exact component={Login} />
               <Route path="/shop" exact component={Commerce} />
               <Route path="/product/:id" exact component={ProductDetail} />
+              <Route path="/checkout" exact component={Checkout} />
             </Switch>
           </AnimatePresence>
         )}
