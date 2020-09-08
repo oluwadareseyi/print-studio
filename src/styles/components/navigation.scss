@@ -5,6 +5,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @include media("<=950px") {
+        padding-bottom: 0;
+    }
+
 
 
     .logo {
