@@ -47,12 +47,10 @@ const Shipping = ({ setSelectedTab }) => {
       </form>
       <div className="panels">
         <div onClick={() => setSelectedTab("customer")} className="return">
-          <span>&#8592;</span> Return to Shop
+          <span>&#8592;</span> Back to Shipping Info
         </div>
 
-        <button onClick={() => setSelectedTab("payment")}>
-          Continue to Payment
-        </button>
+        <button onClick={() => setSelectedTab("payment")}>To Payment</button>
       </div>
     </div>
   );

@@ -7,11 +7,29 @@ $greyText: #788995;
     display: grid;
     grid-template-columns: 1fr 24%;
 
+    @include media("<=1040px") {
+        grid-template-columns: 1fr 27%;
+    }
+
+    @include media("<=950px") {
+        grid-template-columns: 1fr;
+    }
+
 
     // cart details
     .right {
         background: #EEE5FE;
         padding: 0 40px;
+
+        @include media("<=1040px") {
+            padding: 0 30px;
+        }
+
+        @include media("<=950px") {
+            display: none;
+        }
+
+
 
         &__top {
             display: flex;
@@ -21,6 +39,8 @@ $greyText: #788995;
 
             .title {
                 font-size: 20px;
+
+
             }
 
             .number {
@@ -105,18 +125,36 @@ $greyText: #788995;
     .left {
         padding: 0 120px;
 
-        // .top {
-        //     // margin-bottom: 60px;
-        // }
+        @include media("<=1040px") {
+            padding: 0 50px;
+        }
+
+        @include media("<=500px") {
+            padding: 0 30px;
+        }
+
+        .top {
+            @include media("<=950px") {
+                display: none;
+            }
+        }
 
         .bottom {
             padding: 55px 0;
+
+            @include media("<=950px") {
+                padding-top: 30px;
+            }
         }
 
 
         .tab-form {
             .title {
                 font-size: 20px;
+
+                @include media("<=950px") {
+                    margin-bottom: 30px;
+                }
             }
 
             label {
@@ -128,10 +166,6 @@ $greyText: #788995;
                 font-size: 12px;
                 font-weight: 600;
                 margin-bottom: 5px;
-
-                // @include media("<=1040px") {
-                //     font-size: 12px;
-                // }
             }
 
             input[type=text],
@@ -201,6 +235,14 @@ $greyText: #788995;
                     span {
                         margin-right: 10px;
                     }
+
+                    @include media("<=500px") {
+                        font-size: 14px;
+
+                        span {
+                            margin-right: 5px;
+                        }
+                    }
                 }
 
                 button {
@@ -211,6 +253,14 @@ $greyText: #788995;
                     padding: 15px 30px;
                     font-weight: 600;
                     text-transform: uppercase;
+
+                    @include media("<=500px") {
+                        padding: 15px 20px;
+                    }
+
+                    @include media("<=400px") {
+                        padding: 15px 10px;
+                    }
                 }
             }
         }
@@ -224,8 +274,16 @@ $greyText: #788995;
             justify-content: space-between;
             margin-bottom: 10px;
 
+            @include media("<=650px") {
+                flex-direction: column;
+            }
+
             .side {
                 width: 47%;
+
+                @include media("<=650px") {
+                    width: 100%;
+                }
             }
 
             .side-btn {

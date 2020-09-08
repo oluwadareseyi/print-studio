@@ -26,6 +26,10 @@ const sideDrawer = (props) => {
           <Link to="/create" onClick={props.clicked}>
             <div className={classes.NavItems}>Sign up</div>
           </Link>
+
+          <Link to="/checkout" onClick={props.clicked}>
+            <div className={classes.NavItems}>Cart</div>
+          </Link>
         </nav>
       </div>
     </React.Fragment>
