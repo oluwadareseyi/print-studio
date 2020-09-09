@@ -352,9 +352,12 @@ $greyText: #788995;
 
     }
 
-    .left,
-    .right {
+    .left {
         padding-top: 50px;
+    }
+
+    .right {
+        padding: 50px;
     }
 
     // specific to shipping;
